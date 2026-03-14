@@ -1,9 +1,9 @@
-
 "use client"
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, X, Sparkles, ChevronDown, Phone } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, ChevronDown, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import {
@@ -11,6 +11,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+
+const LOGO_URL = "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/CleanSweep-Layer%2011%20copy.png?alt=media&token=e060532e-cc86-43f8-8780-76371d95c936"
 
 const cleaningTypes = [
   { name: "One-time Service", href: "/services/one-time" },
@@ -57,13 +59,16 @@ export function Navigation() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
-          <div className="bg-primary p-2 rounded-lg group-hover:bg-accent transition-colors">
-            <Sparkles className="h-6 w-6 text-white" />
+        <Link href="/" className="flex items-center gap-3 group shrink-0">
+          <div className="relative h-10 w-40">
+            <Image
+              src={LOGO_URL}
+              alt="CleanSweep Cleaning Company LLC"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-          <span className="text-xl font-bold tracking-tight text-primary font-headline whitespace-nowrap">
-            Sparkle<span className="text-accent-foreground/70">Pro</span>
-          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -95,7 +100,7 @@ export function Navigation() {
             </PopoverContent>
           </Popover>
 
-          <Link href="#about" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Why Sparkle Pro?</Link>
+          <Link href="#about" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Why CleanSweep?</Link>
           <Link href="#faq" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">FAQ</Link>
           <Link href="#locations" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
           
@@ -139,7 +144,7 @@ export function Navigation() {
               </div>
             </div>
             <div className="pt-6 border-t space-y-4">
-              <Link href="#about" className="block text-sm font-semibold px-2 py-2">Why Sparkle Pro?</Link>
+              <Link href="#about" className="block text-sm font-semibold px-2 py-2">Why CleanSweep?</Link>
               <Link href="#locations" className="block text-sm font-semibold px-2 py-2">Locations</Link>
               <div className="flex items-center gap-2 text-primary font-bold px-2 py-2">
                 <Phone className="h-4 w-4" />

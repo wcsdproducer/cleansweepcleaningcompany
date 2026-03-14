@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -169,7 +168,7 @@ export function AIPlanGenerator() {
               <Card className="lg:col-span-2 rounded-3xl shadow-lg border-none">
                 <CardHeader className="p-8 border-b">
                   <CardTitle className="text-2xl">Your Tailored Checklist</CardTitle>
-                  <CardDescription>Based on Sparkle Pro's 49-Point Standard</CardDescription>
+                  <CardDescription>Based on CleanSweep's 49-Point Standard</CardDescription>
                 </CardHeader>
                 <CardContent className="p-8">
                   <div className="grid md:grid-cols-2 gap-4">

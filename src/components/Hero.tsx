@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -24,7 +23,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImage?.imageUrl || ""}
-          alt={heroImage?.description || "Sparkle Pro Clean Home"}
+          alt={heroImage?.description || "CleanSweep Clean Home"}
           fill
           className="object-cover opacity-20"
           priority
@@ -37,7 +36,7 @@ export function Hero() {
         <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
           <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full border border-primary/20">
             <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-xs font-semibold text-primary-foreground/80 uppercase tracking-widest">Trust Sparkle Pro</span>
+            <span className="text-xs font-semibold text-primary-foreground/80 uppercase tracking-widest">Trust CleanSweep</span>
           </div>
           
           <h1 className="text-5xl lg:text-7xl font-bold font-headline leading-[1.1] text-foreground">

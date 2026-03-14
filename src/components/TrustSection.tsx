@@ -1,4 +1,3 @@
-
 "use client"
 
 import { ShieldCheck, Leaf, Search, RefreshCw, Trophy } from "lucide-react"
@@ -17,7 +16,7 @@ const benefits = [
   {
     icon: Search,
     title: "Background Checked",
-    desc: "Every Sparkle Pro professional undergoes a rigorous background screening.",
+    desc: "Every CleanSweep professional undergoes a rigorous background screening.",
   },
   {
     icon: RefreshCw,

@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -86,7 +85,7 @@ export function Checklist() {
     <section id="checklist" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold font-headline mb-4">The Sparkle Pro 49-Point Checklist</h2>
+          <h2 className="text-4xl font-bold font-headline mb-4">The CleanSweep 49-Point Checklist</h2>
           <p className="text-muted-foreground text-lg">
             We don't just clean; we obsess over details. Our comprehensive checklist ensures your home meets our highest standards of cleanliness every single time.
           </p>
@@ -129,7 +128,7 @@ export function Checklist() {
               <h3 className="text-2xl font-bold mb-6">Why our checklist matters</h3>
               <ul className="space-y-6">
                 {[
-                  { title: "Standardized Excellence", desc: "Every PRO follows the exact same rigorous process." },
+                  { title: "Standardized Excellence", desc: "Every professional follows the exact same rigorous process." },
                   { title: "Transparency", desc: "You know exactly what was cleaned and what to expect." },
                   { title: "Accountability", desc: "Items are checked off in real-time by our cleaning supervisors." },
                   { title: "Customization", desc: "Focus more on areas that matter to you, skip the ones that don't." },

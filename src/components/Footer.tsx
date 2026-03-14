@@ -1,8 +1,10 @@
-
 "use client"
 
 import Link from "next/link"
-import { Sparkles, Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+import Image from "next/image"
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+
+const LOGO_URL = "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/CleanSweep-Layer%2011%20copy.png?alt=media&token=e060532e-cc86-43f8-8780-76371d95c936"
 
 export function Footer() {
   return (
@@ -11,12 +13,14 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-16">
           <div className="col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="bg-primary p-2 rounded-lg">
-                <Sparkles className="h-6 w-6 text-white" />
+              <div className="relative h-12 w-48">
+                <Image
+                  src={LOGO_URL}
+                  alt="CleanSweep Cleaning Company LLC"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <span className="text-2xl font-bold tracking-tight text-primary font-headline">
-                Sparkle<span className="text-accent-foreground/70">Pro</span>
-              </span>
             </Link>
             <p className="text-muted-foreground max-w-xs leading-relaxed">
               Professional residential cleaning services that give you the time to focus on what matters most. Locally owned, bonded, and insured.
@@ -52,7 +56,7 @@ export function Footer() {
             <h4 className="font-bold">Company</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
               <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Why Sparkle Pro</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Why CleanSweep</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Franchise Info</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Press</Link></li>
@@ -83,7 +87,7 @@ export function Footer() {
         </div>
 
         <div className="pt-12 border-t flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
-          <p>© 2024 Sparkle Pro. All rights reserved. Locally owned and operated.</p>
+          <p>© 2024 CleanSweep Cleaning Company LLC. All rights reserved. Locally owned and operated.</p>
           <div className="flex items-center gap-8">
             <Link href="#" className="hover:text-primary">Terms of Service</Link>
             <Link href="#" className="hover:text-primary">Cookie Settings</Link>

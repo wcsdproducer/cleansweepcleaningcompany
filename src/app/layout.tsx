@@ -1,10 +1,9 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 
 export const metadata: Metadata = {
-  title: 'Sparkle Pro | Your Professional Cleaning Partner',
+  title: 'CleanSweep Cleaning Company LLC | Professional Cleaning Services',
   description: 'Premium residential cleaning services with a 49-point checklist. Bonded, insured, and eco-friendly.',
 };
 
