@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -162,7 +161,7 @@ export default function GreenerCleaningPage() {
                 <h3 className="text-2xl font-bold text-[#1a6a91]">CleanSweep Resources</h3>
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-4">
                   {[
-                    "FAQs", "Employment", "Blog", "Press", "Contact", "Service Feedback", "Refer-Friends Get $50", "Privacy Policy", "Terms of Service"
+                    "FAQs", "Blog", "Contact", "Privacy Policy", "Terms of Service"
                   ].map((res) => (
                     <Link 
                       key={res} 
