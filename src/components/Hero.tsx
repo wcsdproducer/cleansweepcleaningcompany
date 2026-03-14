@@ -19,6 +19,13 @@ export function Hero() {
     }
   }, [auth])
 
+  const clientAvatars = [
+    "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FClients%2FClient%2001.png?alt=media&token=0400eb8c-0959-47df-933a-2bdef8f63239",
+    "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FClients%2FClient%2002.png?alt=media&token=9e325085-0c5d-476f-af5c-b8f2f3765f14",
+    "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FClients%2FClient%2003.png?alt=media&token=d08e8385-2cfb-475c-9556-ec5018bc59ca",
+    "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FClients%2FClient%2004.png?alt=media&token=9da423b8-13b1-4fa0-9058-59e30f206772"
+  ]
+
   return (
     <section className="relative min-h-[80vh] flex items-center py-12 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -52,9 +59,9 @@ export function Hero() {
 
           <div className="flex items-center gap-6 pt-4">
             <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="h-10 w-10 rounded-full border-2 border-background overflow-hidden">
-                  <Image src={`https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2F${i}.jpg?alt=media`} alt="User" width={40} height={40} className="object-cover" />
+              {clientAvatars.map((url, i) => (
+                <div key={i} className="h-10 w-10 rounded-full border-2 border-background overflow-hidden relative">
+                  <Image src={url} alt={`Client ${i + 1}`} fill className="object-cover" />
                 </div>
               ))}
             </div>
