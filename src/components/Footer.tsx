@@ -78,7 +78,6 @@ export function Footer() {
             <ul className="space-y-4 text-muted-foreground text-sm">
               <li><Link href="#" className="hover:text-primary transition-colors">Wesley Chapel, FL</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">New Tampa, FL</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Find a Location</Link></li>
             </ul>
           </div>
         </div>
