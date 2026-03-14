@@ -138,7 +138,7 @@ export function Navigation() {
           
           <div className="flex items-center gap-2 text-primary font-bold shrink-0">
             <Phone className="h-4 w-4" />
-            <span className="text-sm">877-624-3776</span>
+            <span className="text-sm">877-318-4816</span>
           </div>
 
           <Button className="rounded-full px-8 shadow-md hover:shadow-lg transition-all shrink-0" asChild>
@@ -193,7 +193,7 @@ export function Navigation() {
               <Link href="#locations" className="block text-sm font-semibold px-2 py-2">Locations</Link>
               <div className="flex items-center gap-2 text-primary font-bold px-2 py-2">
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">877-624-3776</span>
+                <span className="text-sm">877-318-4816</span>
               </div>
               <Button className="w-full rounded-2xl py-6 text-lg font-bold mt-4" onClick={() => setIsOpen(false)} asChild>
                 <Link href="/contact">Get Free Estimate</Link>

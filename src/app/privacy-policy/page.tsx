@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -92,7 +93,7 @@ export default function PrivacyPolicyPage() {
               <div className="mt-4 p-6 bg-secondary/20 rounded-2xl border border-primary/10">
                 <p className="font-bold text-[#1a6a91]">CleanSweep Cleaning Company LLC</p>
                 <p>Email: info@cleansweepcleaningcompany.com</p>
-                <p>Phone: 877-624-3776</p>
+                <p>Phone: 877-318-4816</p>
                 <p>Address: 3360 S Richfield Way, Aurora, CO 80013</p>
               </div>
             </section>
