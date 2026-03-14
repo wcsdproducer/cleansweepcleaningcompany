@@ -74,7 +74,7 @@ export default function FAQPage() {
     <div className="flex flex-col min-h-screen">
       <Navigation />
       
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative h-[400px] w-full flex items-center overflow-hidden">
           <Image

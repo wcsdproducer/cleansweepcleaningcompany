@@ -19,7 +19,7 @@ export function ServicePageTemplate({ title, description, imageHint, features }:
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
-      <main className="flex-grow pt-24">
+      <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative py-24 bg-[#1a6a91] text-white overflow-hidden">
           <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center">

@@ -1,4 +1,6 @@
 
+"use client"
+
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -8,21 +10,9 @@ import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { blogPosts } from "@/lib/blog-posts"
-import type { Metadata } from "next"
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
-  if (!post) return { title: "Post Not Found" }
-
-  return {
-    title: post.seoTitle,
-    description: post.seoDescription,
-  }
-}
-
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
+export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = React.use(params)
   const post = blogPosts.find((p) => p.slug === slug)
 
   if (!post) {
@@ -33,8 +23,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <div className="flex flex-col min-h-screen">
       <Navigation />
       
-      <main className="flex-grow pt-24 pb-20">
-        <article className="container mx-auto px-4 max-w-4xl">
+      <main className="flex-grow pb-20">
+        <article className="container mx-auto px-4 max-w-4xl pt-12">
           {/* Back Button */}
           <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline mb-8">
             <ArrowLeft className="h-4 w-4" />

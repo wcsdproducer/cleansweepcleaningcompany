@@ -27,7 +27,7 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen">
       <Navigation />
       
-      <main className="flex-grow pt-24 pb-20">
+      <main className="flex-grow pb-20">
         <section className="bg-[#1a6a91] text-white py-20 relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10 text-center space-y-6">
             <h1 className="text-5xl font-bold font-headline leading-tight">Get in Touch</h1>

@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -19,7 +20,7 @@ export function Hero() {
   }, [auth])
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center py-12 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImage?.imageUrl || ""}

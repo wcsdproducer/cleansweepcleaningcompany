@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
     <div className="flex flex-col min-h-screen">
       <Navigation />
       
-      <main className="flex-grow pt-32 pb-20">
+      <main className="flex-grow py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-4xl font-bold font-headline mb-8 text-[#1a6a91]">Privacy Policy</h1>
           
