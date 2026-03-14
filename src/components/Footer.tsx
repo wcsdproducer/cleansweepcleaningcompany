@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-16">
           <div className="col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative h-16 w-64">
+              <div className="relative h-20 w-80">
                 <Image
                   src={LOGO_URL}
                   alt="CleanSweep Cleaning Company LLC"
