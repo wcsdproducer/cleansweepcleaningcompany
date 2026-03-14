@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -44,41 +45,39 @@ export function Footer() {
           <div className="space-y-6">
             <h4 className="font-bold">Services</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
-              <li><Link href="#" className="hover:text-primary transition-colors">House Cleaning</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Deep Cleaning</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Move In/Out</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Commercial</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Checklist</Link></li>
+              <li><Link href="/services/regular" className="hover:text-primary transition-colors">House Cleaning</Link></li>
+              <li><Link href="/services/deep-clean" className="hover:text-primary transition-colors">Deep Cleaning</Link></li>
+              <li><Link href="/services/move-in-out" className="hover:text-primary transition-colors">Move In/Out</Link></li>
+              <li><Link href="/specialty/housekeeping" className="hover:text-primary transition-colors">Housekeeping</Link></li>
+              <li><Link href="/#checklist" className="hover:text-primary transition-colors">Checklist</Link></li>
             </ul>
           </div>
 
           <div className="space-y-6">
             <h4 className="font-bold">Company</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
-              <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Why CleanSweep</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Franchise Info</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Press</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/greener-cleaning" className="hover:text-primary transition-colors">Why CleanSweep</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
             </ul>
           </div>
 
           <div className="space-y-6">
             <h4 className="font-bold">Support</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
-              <li><Link href="#" className="hover:text-primary transition-colors">FAQs</Link></li>
+              <li><Link href="/faq" className="hover:text-primary transition-colors">FAQs</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Gift Cards</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Service Feedback</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 
           <div className="space-y-6">
             <h4 className="font-bold">Locations</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
-              <li><Link href="#" className="hover:text-primary transition-colors">Boston, MA</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Austin, TX</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Boston, MA</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">San Diego, CA</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Chicago, IL</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Find a Location</Link></li>
