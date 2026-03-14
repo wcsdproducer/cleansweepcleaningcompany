@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -67,7 +68,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group shrink-0">
-          <div className="relative h-14 w-56">
+          <div className="relative h-14 w-64">
             <Image
               src={LOGO_URL}
               alt="CleanSweep Cleaning Company LLC"
@@ -132,7 +133,7 @@ export function Navigation() {
             </PopoverContent>
           </Popover>
 
-          <Link href="#faq" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">FAQ</Link>
+          <Link href="/faq" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">FAQ</Link>
           <Link href="#locations" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
           
           <div className="flex items-center gap-2 text-primary font-bold shrink-0">
@@ -141,7 +142,7 @@ export function Navigation() {
           </div>
 
           <Button className="rounded-full px-8 shadow-md hover:shadow-lg transition-all shrink-0" asChild>
-            <Link href="#estimate">Get Free Estimate</Link>
+            <Link href="/contact">Get Free Estimate</Link>
           </Button>
         </nav>
 
@@ -188,13 +189,14 @@ export function Navigation() {
                   </Link>
                 ))}
               </div>
+              <Link href="/faq" className="block text-sm font-semibold px-2 py-2">FAQ</Link>
               <Link href="#locations" className="block text-sm font-semibold px-2 py-2">Locations</Link>
               <div className="flex items-center gap-2 text-primary font-bold px-2 py-2">
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">877-624-3776</span>
               </div>
               <Button className="w-full rounded-2xl py-6 text-lg font-bold mt-4" onClick={() => setIsOpen(false)} asChild>
-                <Link href="#estimate">Get Free Estimate</Link>
+                <Link href="/contact">Get Free Estimate</Link>
               </Button>
             </div>
           </nav>
