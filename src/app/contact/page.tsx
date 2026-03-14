@@ -2,27 +2,14 @@
 "use client"
 
 import * as React from "react"
+import Script from "next/script"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Sparkles, Send } from "lucide-react"
+import { Sparkles } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { useToast } from "@/hooks/use-toast"
 
 export default function ContactPage() {
-  const { toast } = useToast()
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    })
-  }
-
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
@@ -40,33 +27,34 @@ export default function ContactPage() {
         </section>
 
         <section className="container mx-auto px-4 -mt-16 relative z-20">
-          <div className="max-w-3xl mx-auto">
-            {/* Centered Contact Form */}
-            <Card className="rounded-[40px] shadow-2xl border-none overflow-hidden">
-              <CardContent className="p-10 md:p-16">
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <Label htmlFor="name" className="text-lg font-semibold">Full Name</Label>
-                      <Input id="name" placeholder="John Doe" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" required />
-                    </div>
-                    <div className="space-y-3">
-                      <Label htmlFor="email" className="text-lg font-semibold">Email Address</Label>
-                      <Input id="email" type="email" placeholder="john@example.com" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" required />
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <Label htmlFor="subject" className="text-lg font-semibold">Subject</Label>
-                    <Input id="subject" placeholder="General Inquiry" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" />
-                  </div>
-                  <div className="space-y-3">
-                    <Label htmlFor="message" className="text-lg font-semibold">Message</Label>
-                    <Textarea id="message" placeholder="How can we help you?" className="min-h-[200px] rounded-[30px] border-muted bg-secondary/5 focus:ring-primary p-6" required />
-                  </div>
-                  <Button type="submit" className="w-full h-16 rounded-2xl text-xl font-bold bg-[#2eb086] hover:bg-[#25916e] shadow-xl gap-3 transition-all active:scale-[0.98]">
-                    Send Message <Send className="h-5 w-5" />
-                  </Button>
-                </form>
+          <div className="max-w-4xl mx-auto">
+            {/* Centered Embedded Contact Form */}
+            <Card className="rounded-[40px] shadow-2xl border-none overflow-hidden bg-white">
+              <CardContent className="p-0">
+                <div className="w-full min-h-[650px] relative">
+                  <iframe
+                    src="https://links.t3kniq.com/widget/form/ZkVglWQliPdv0DvcFE2R"
+                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                    id="inline-ZkVglWQliPdv0DvcFE2R" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact Us"
+                    data-height="609"
+                    data-layout-iframe-id="inline-ZkVglWQliPdv0DvcFE2R"
+                    data-form-id="ZkVglWQliPdv0DvcFE2R"
+                    title="Contact Us"
+                    className="min-h-[650px]"
+                  />
+                  <Script 
+                    src="https://links.t3kniq.com/js/form_embed.js" 
+                    strategy="lazyOnload"
+                  />
+                </div>
               </CardContent>
             </Card>
           </div>
