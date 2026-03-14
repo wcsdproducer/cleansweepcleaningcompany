@@ -6,10 +6,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, MapPin, CheckCircle2, Info, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
-import { cn } from "@/lib/utils"
 
 export default function AboutPage() {
   return (
@@ -32,13 +30,9 @@ export default function AboutPage() {
             <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl max-w-md border-t-8 border-primary animate-in fade-in slide-in-from-left duration-700">
               <h1 className="text-4xl font-bold font-headline mb-4 text-[#1a6a91]">Meet CleanSweep</h1>
               <p className="text-muted-foreground mb-6">Your local home cleaning experts, dedicated to making your life easier.</p>
-              <div className="flex gap-2">
-                <div className="relative flex-1">
-                  <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input placeholder="Zip/Postal Code" className="pl-9 h-12 rounded-xl" />
-                </div>
-                <Button className="h-12 px-6 rounded-xl bg-[#2eb086] hover:bg-[#25916e]">Go</Button>
-              </div>
+              <Button className="h-12 px-8 rounded-xl bg-[#2eb086] hover:bg-[#25916e] font-bold" asChild>
+                <Link href="/contact">Get Free Estimate</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -84,12 +78,11 @@ export default function AboutPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-3xl font-bold">Try CleanSweep and see why cleaning is a big deal to us.</h3>
-                <p className="text-white/80">Find Your CleanSweep location today.</p>
+                <p className="text-white/80">Schedule your professional clean today.</p>
               </div>
-              <div className="flex gap-2 w-full max-w-md">
-                <Input placeholder="Zip/Postal Code" className="bg-white text-foreground h-12 rounded-xl border-none" />
-                <Button className="h-12 px-8 rounded-xl bg-[#2eb086] hover:bg-[#25916e] text-white">Go</Button>
-              </div>
+              <Button className="h-12 px-10 rounded-xl bg-[#2eb086] hover:bg-[#25916e] text-white font-bold" asChild>
+                <Link href="/contact">Book Now</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -128,8 +121,8 @@ export default function AboutPage() {
                 <p className="text-white/80 text-lg leading-relaxed">
                   We believe in treating your home with the same care and respect as our own. We value integrity, reliability, and excellence in everything we do. Our team is committed to providing a service that exceeds your expectations.
                 </p>
-                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary rounded-xl px-8 h-12">
-                  Learn More
+                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary rounded-xl px-8 h-12" asChild>
+                  <Link href="/contact">Learn More</Link>
                 </Button>
               </div>
             </div>
@@ -191,7 +184,7 @@ export default function AboutPage() {
                   </div>
                   <div className="p-6 space-y-4">
                     <h4 className="font-bold text-[#1a6a91] leading-tight">{blog.title}</h4>
-                    <Link href="/blog" className="text-xs font-bold text-primary uppercase tracking-widest hover:underline inline-flex items-center">
+                    <Link href={`/blog/${blog.title.toLowerCase().replace(/ /g, '-')}`} className="text-xs font-bold text-primary uppercase tracking-widest hover:underline inline-flex items-center">
                       Continue Reading <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
                   </div>
@@ -212,10 +205,9 @@ export default function AboutPage() {
                 <div className="relative z-10 space-y-4">
                   <h2 className="text-4xl font-bold">Get started and see why cleaning is a big deal to us.</h2>
                   <p className="text-white/80 text-lg">Book your clean today!</p>
-                  <div className="flex gap-2 max-w-sm pt-4">
-                    <Input placeholder="Zip/Postal Code" className="bg-white text-foreground rounded-xl h-12" />
-                    <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-xl px-8 h-12">Go</Button>
-                  </div>
+                  <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-xl px-10 h-14 font-bold text-lg shadow-xl" asChild>
+                    <Link href="/contact">Get Free Estimate</Link>
+                  </Button>
                 </div>
               </div>
               

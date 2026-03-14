@@ -4,12 +4,11 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Search, MapPin, CheckCircle2, ChevronRight, HelpCircle, MessageSquare } from "lucide-react"
+import { Search, CheckCircle2, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
-import { cn } from "@/lib/utils"
 
 const faqData = [
   {
@@ -89,14 +88,10 @@ export default function FAQPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="bg-white/95 backdrop-blur-md p-10 rounded-[40px] shadow-2xl max-w-lg border-t-8 border-primary animate-in fade-in slide-in-from-left duration-700">
               <h1 className="text-4xl font-bold font-headline mb-4 text-[#1a6a91]">Frequently Asked Questions</h1>
-              <p className="text-muted-foreground mb-8">Find Your Location</p>
-              <div className="flex gap-2">
-                <div className="relative flex-1">
-                  <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                  <Input placeholder="Zip/Postal Code" className="pl-11 h-14 rounded-2xl bg-secondary/5 border-muted" />
-                </div>
-                <Button className="h-14 px-8 rounded-2xl bg-[#2eb086] hover:bg-[#25916e] font-bold text-lg">Go</Button>
-              </div>
+              <p className="text-muted-foreground mb-8">Everything you need to know about our professional cleaning services.</p>
+              <Button className="h-14 px-10 rounded-2xl bg-[#2eb086] hover:bg-[#25916e] font-bold text-lg" asChild>
+                <Link href="/contact">Get Free Estimate</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -109,7 +104,7 @@ export default function FAQPage() {
               We know it can be a little stressful preparing for your first professional house cleaning. That's why we've compiled this list of Frequently Asked Questions to hopefully give you some guidance.
             </p>
             <p className="text-muted-foreground">
-              If one of your questions isn't on this list, feel free to reach out to your <Link href="/contact" className="text-primary font-bold hover:underline">local CleanSweep</Link> to ask!
+              If one of your questions isn't on this list, feel free to reach out to our team to ask!
             </p>
           </div>
         </section>
@@ -164,10 +159,9 @@ export default function FAQPage() {
                 <div className="relative z-10 space-y-6">
                   <h2 className="text-4xl font-bold font-headline leading-tight">Get started and see why cleaning is a big deal to us.</h2>
                   <p className="text-white/80 text-xl">Book your clean today!</p>
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 max-w-md">
-                    <Input placeholder="Zip/Postal Code" className="bg-white text-foreground rounded-2xl h-14" />
-                    <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-2xl px-10 h-14 font-bold text-lg shadow-xl">Go</Button>
-                  </div>
+                  <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-2xl px-10 h-14 font-bold text-lg shadow-xl" asChild>
+                    <Link href="/contact">Get Free Estimate</Link>
+                  </Button>
                 </div>
               </div>
               

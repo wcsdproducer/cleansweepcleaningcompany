@@ -3,9 +3,9 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { MapPin, ArrowRight, Sparkles } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { useAuth, initiateAnonymousSignIn } from "@/firebase"
 
@@ -44,18 +44,11 @@ export function Hero() {
             Professional home cleaning services tailored to your life. From recurring visits to deep cleans, we bring the sparkle back to your space.
           </p>
 
-          <div className="bg-white p-2 rounded-2xl shadow-xl border border-border flex flex-col sm:flex-row gap-2 max-w-md">
-            <div className="flex-1 relative">
-              <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-              <Input
-                placeholder="Enter Zip Code"
-                className="pl-10 border-none bg-transparent h-12 text-lg focus-visible:ring-0"
-              />
-            </div>
-            <Button className="h-12 px-8 rounded-xl font-semibold gap-2 shadow-lg hover:shadow-accent/40 transition-all bg-accent text-accent-foreground hover:bg-accent/90">
-              Get Quote <ArrowRight className="h-4 w-4" />
-            </Button>
-          </div>
+          <Button className="h-16 px-10 rounded-2xl font-bold text-xl gap-3 shadow-xl hover:shadow-accent/40 transition-all bg-[#2eb086] text-white hover:bg-[#25916e] max-w-fit" asChild>
+            <Link href="/contact">
+              Get Free Estimate <ArrowRight className="h-6 w-6" />
+            </Link>
+          </Button>
 
           <div className="flex items-center gap-6 pt-4">
             <div className="flex -space-x-3">
@@ -80,7 +73,7 @@ export function Hero() {
               className="object-cover"
             />
           </div>
-          {/* Floating cards for trust */}
+          {/* Floating card for trust */}
           <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[240px] border">
             <div className="flex items-center gap-3 mb-2">
               <div className="bg-primary/10 p-2 rounded-lg">

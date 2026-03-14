@@ -132,7 +132,6 @@ export function Navigation() {
           </Popover>
 
           <Link href="/faq" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">FAQ</Link>
-          <Link href="#locations" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
           
           <div className="flex items-center gap-2 text-primary font-bold shrink-0">
             <Phone className="h-4 w-4" />
@@ -188,7 +187,6 @@ export function Navigation() {
                 ))}
               </div>
               <Link href="/faq" className="block text-sm font-semibold px-2 py-2">FAQ</Link>
-              <Link href="#locations" className="block text-sm font-semibold px-2 py-2">Locations</Link>
               <div className="flex items-center gap-2 text-primary font-bold px-2 py-2">
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">877-318-4816</span>

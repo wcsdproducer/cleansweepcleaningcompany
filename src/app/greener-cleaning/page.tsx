@@ -4,9 +4,8 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { CheckCircle2, MapPin, ChevronRight, Info } from "lucide-react"
+import { CheckCircle2, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
@@ -35,13 +34,10 @@ export default function GreenerCleaningPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl max-w-md border-t-8 border-primary">
               <h1 className="text-4xl font-bold font-headline mb-4 text-[#1a6a91]">Greener Cleaning</h1>
-              <div className="flex gap-2">
-                <div className="relative flex-1">
-                  <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input placeholder="Zip/Postal Code" className="pl-9 h-12 rounded-xl" />
-                </div>
-                <Button className="h-12 px-6 rounded-xl bg-[#2eb086] hover:bg-[#25916e]">Go</Button>
-              </div>
+              <p className="text-muted-foreground mb-6">Environmentally responsible professional cleaning.</p>
+              <Button className="h-12 px-8 rounded-xl bg-[#2eb086] hover:bg-[#25916e] font-bold" asChild>
+                <Link href="/contact">Get Free Estimate</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -53,7 +49,7 @@ export default function GreenerCleaningPage() {
               <li><Link href="#checklist" className="hover:text-accent transition-colors">Checklist</Link></li>
               <li><Link href="#" className="hover:text-accent transition-colors">Products</Link></li>
               <li><Link href="#" className="hover:text-accent transition-colors">Resources</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors">Find Another CleanSweep</Link></li>
+              <li><Link href="/contact" className="hover:text-accent transition-colors">Contact Us</Link></li>
             </ul>
           </div>
         </nav>
@@ -156,10 +152,9 @@ export default function GreenerCleaningPage() {
                 <div className="relative z-10 space-y-4">
                   <h2 className="text-4xl font-bold">Get started and see why cleaning is a big deal to us.</h2>
                   <p className="text-white/80 text-lg">Book your clean today!</p>
-                  <div className="flex gap-2 max-w-sm pt-4">
-                    <Input placeholder="Zip/Postal Code" className="bg-white text-foreground rounded-xl h-12" />
-                    <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-xl px-8 h-12">Go</Button>
-                  </div>
+                  <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-xl px-10 h-14 font-bold text-lg shadow-xl" asChild>
+                    <Link href="/contact">Get Free Estimate</Link>
+                  </Button>
                 </div>
               </div>
               

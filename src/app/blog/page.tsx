@@ -6,7 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight, Calendar, Tag } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { blogPosts } from "@/lib/blog-posts"
@@ -119,10 +118,9 @@ export default function BlogPage() {
                 <div className="relative z-10 space-y-6 text-center lg:text-left">
                   <h2 className="text-4xl font-bold font-headline leading-tight">Ready to see why cleaning is a big deal to us?</h2>
                   <p className="text-white/80 text-xl">Book your CleanSweep service today!</p>
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 max-w-md mx-auto lg:mx-0">
-                    <Input placeholder="Zip/Postal Code" className="bg-white text-foreground rounded-xl h-14" />
-                    <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-xl px-10 h-14 font-bold text-lg shadow-xl">Go</Button>
-                  </div>
+                  <Button className="bg-[#2eb086] hover:bg-[#25916e] rounded-xl px-10 h-14 font-bold text-lg shadow-xl" asChild>
+                    <Link href="/contact">Get Free Estimate</Link>
+                  </Button>
                 </div>
               </div>
               
