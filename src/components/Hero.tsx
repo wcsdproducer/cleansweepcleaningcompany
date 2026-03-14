@@ -54,7 +54,7 @@ export function Hero() {
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="h-10 w-10 rounded-full border-2 border-background overflow-hidden">
-                  <Image src={`https://picsum.photos/seed/${i + 10}/40/40`} alt="User" width={40} height={40} />
+                  <Image src={`https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2F${i}.jpg?alt=media`} alt="User" width={40} height={40} className="object-cover" />
                 </div>
               ))}
             </div>

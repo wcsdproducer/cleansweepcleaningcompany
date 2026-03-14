@@ -4,11 +4,12 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, Calendar, Tag } from "lucide-react"
+import { ChevronRight, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { blogPosts } from "@/lib/blog-posts"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export default function BlogPage() {
   const [mounted, setMounted] = React.useState(false)
@@ -16,6 +17,8 @@ export default function BlogPage() {
   React.useEffect(() => {
     setMounted(true)
   }, [])
+
+  const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || ""
 
   // Helper to safely format dates only on the client to avoid hydration mismatches
   const formatDate = (dateStr: string) => {
@@ -35,7 +38,7 @@ export default function BlogPage() {
         {/* Blog Hero */}
         <section className="relative h-[350px] w-full flex items-center overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/blog-hero/1600/600"
+            src={getImg("blog-hero")}
             alt="CleanSweep Blog"
             fill
             className="object-cover"
@@ -113,7 +116,7 @@ export default function BlogPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
               <div className="bg-[#1a6a91] p-12 rounded-3xl text-white space-y-8 relative overflow-hidden shadow-2xl min-h-[400px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                  <Image src="https://picsum.photos/seed/resource-bg/1000/800" alt="bg" fill className="object-cover" />
+                  <Image src={getImg("resource-bg")} alt="bg" fill className="object-cover" />
                 </div>
                 <div className="relative z-10 space-y-6 text-center lg:text-left">
                   <h2 className="text-4xl font-bold font-headline leading-tight">Ready to see why cleaning is a big deal to us?</h2>

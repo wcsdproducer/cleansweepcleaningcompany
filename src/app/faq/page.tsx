@@ -4,11 +4,12 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Search, CheckCircle2, ChevronRight } from "lucide-react"
+import { Search, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const faqData = [
   {
@@ -64,6 +65,8 @@ const faqData = [
 export default function FAQPage() {
   const [searchQuery, setSearchQuery] = React.useState("")
 
+  const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || ""
+
   const filteredFaqs = faqData.filter(faq => 
     faq.q.toLowerCase().includes(searchQuery.toLowerCase()) || 
     faq.a.toLowerCase().includes(searchQuery.toLowerCase())
@@ -77,7 +80,7 @@ export default function FAQPage() {
         {/* Hero Section */}
         <section className="relative h-[400px] w-full flex items-center overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/faq-hero/1600/600"
+            src={getImg("faq-hero")}
             alt="FAQ Hero"
             fill
             className="object-cover"
@@ -154,7 +157,7 @@ export default function FAQPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
               <div className="bg-[#1a6a91] p-12 rounded-[40px] text-white space-y-8 relative overflow-hidden shadow-2xl min-h-[450px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                  <Image src="https://picsum.photos/seed/resource-bg/1000/800" alt="bg" fill className="object-cover" />
+                  <Image src={getImg("resource-bg")} alt="bg" fill className="object-cover" />
                 </div>
                 <div className="relative z-10 space-y-6">
                   <h2 className="text-4xl font-bold font-headline leading-tight">Get started and see why cleaning is a big deal to us.</h2>

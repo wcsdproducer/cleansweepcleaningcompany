@@ -4,12 +4,15 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, MapPin, CheckCircle2, Info, ChevronRight } from "lucide-react"
+import { ArrowRight, Info, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export default function AboutPage() {
+  const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || ""
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
@@ -18,7 +21,7 @@ export default function AboutPage() {
         {/* Top Hero Section */}
         <section className="relative h-[500px] w-full">
           <Image
-            src="https://picsum.photos/seed/about-hero/1600/900"
+            src={getImg("about-hero")}
             alt="Clean Home Interior"
             fill
             className="object-cover"
@@ -54,7 +57,7 @@ export default function AboutPage() {
                 <div className="absolute -inset-4 bg-primary/10 rounded-3xl -rotate-2" />
                 <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://picsum.photos/seed/cleaning-pro/800/1000"
+                    src={getImg("cleaning-pro")}
                     alt="Cleaning Professional"
                     fill
                     className="object-cover"
@@ -109,7 +112,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://picsum.photos/seed/beliefs/1000/800"
+                  src={getImg("beliefs")}
                   alt="Service Experience"
                   fill
                   className="object-cover"
@@ -147,7 +150,7 @@ export default function AboutPage() {
                 <div className="absolute -inset-4 bg-primary/10 rounded-3xl rotate-2" />
                 <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://picsum.photos/seed/big-deal/1000/800"
+                    src={getImg("big-deal")}
                     alt="Family at Home"
                     fill
                     className="object-cover"
@@ -173,14 +176,14 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { title: "Cleaning Myth: Vinegar cleans everything", img: "vinegar" },
-                { title: "How NOT to Clean with Bleach", img: "bleach" },
-                { title: "12 Days of Holiday Cleaning Checklist", img: "holiday" },
-                { title: "10 Brilliant Christmas Gifts for the Clean Freak", img: "gifts" }
+                { title: "Cleaning Myth: Vinegar cleans everything", img: "1" },
+                { title: "How NOT to Clean with Bleach", img: "2" },
+                { title: "12 Days of Holiday Cleaning Checklist", img: "3" },
+                { title: "10 Brilliant Christmas Gifts for the Clean Freak", img: "4" }
               ].map((blog, idx) => (
                 <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-md group hover:shadow-xl transition-all">
                   <div className="relative h-48">
-                    <Image src={`https://picsum.photos/seed/blog-${idx}/400/300`} alt={blog.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <Image src={`https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2F${blog.img}.jpg?alt=media`} alt={blog.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <div className="p-6 space-y-4">
                     <h4 className="font-bold text-[#1a6a91] leading-tight">{blog.title}</h4>
@@ -200,7 +203,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
               <div className="bg-[#1a6a91] p-12 rounded-3xl text-white space-y-8 relative overflow-hidden shadow-2xl min-h-[400px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                  <Image src="https://picsum.photos/seed/resource-bg/1000/800" alt="bg" fill className="object-cover" />
+                  <Image src={getImg("resource-bg")} alt="bg" fill className="object-cover" />
                 </div>
                 <div className="relative z-10 space-y-4">
                   <h2 className="text-4xl font-bold">Get started and see why cleaning is a big deal to us.</h2>

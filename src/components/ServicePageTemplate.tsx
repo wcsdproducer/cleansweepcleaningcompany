@@ -7,6 +7,7 @@ import { Sparkles, CheckCircle2, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 interface ServicePageTemplateProps {
   title: string
@@ -16,6 +17,8 @@ interface ServicePageTemplateProps {
 }
 
 export function ServicePageTemplate({ title, description, imageHint, features }: ServicePageTemplateProps) {
+  const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || ""
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
@@ -38,7 +41,7 @@ export function ServicePageTemplate({ title, description, imageHint, features }:
             </div>
             <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
               <Image
-                src={`https://picsum.photos/seed/${title.length}/800/600`}
+                src={getImg("service-template-hero")}
                 alt={title}
                 fill
                 className="object-cover"
