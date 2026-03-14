@@ -84,7 +84,7 @@ export function Navigation() {
             </PopoverTrigger>
             <PopoverContent 
               align="center" 
-              className="w-[90vw] max-w-3xl p-0 mt-4 border-none shadow-2xl rounded-3xl overflow-hidden"
+              className="w-auto max-w-2xl p-0 mt-4 border-none shadow-2xl rounded-3xl overflow-hidden"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-8 p-10 bg-white">
                 <MenuSection title="CLEANING TYPES" items={cleaningTypes} />
@@ -93,8 +93,8 @@ export function Navigation() {
               </div>
               <div className="bg-[#1a6a91] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-white">
-                  <h4 className="text-2xl font-bold mb-1">Save $75.00</h4>
-                  <p className="text-white/80">Get $25.00 off your 1st, 3rd and 5th cleans. New customers only.</p>
+                  <h4 className="text-2xl font-bold mb-1">Get a FREE cleaning!</h4>
+                  <p className="text-white/80">Get your 3rd cleaning for free with a minimum 12-month commitment.</p>
                 </div>
                 <Button className="bg-[#2eb086] hover:bg-[#25916e] text-white px-8 py-6 rounded-2xl font-bold text-lg border-2 border-white/20 shadow-lg">
                   Redeem Now
