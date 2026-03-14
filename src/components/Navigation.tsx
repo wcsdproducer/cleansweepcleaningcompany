@@ -60,7 +60,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group shrink-0">
-          <div className="relative h-10 w-40">
+          <div className="relative h-12 w-48">
             <Image
               src={LOGO_URL}
               alt="CleanSweep Cleaning Company LLC"
