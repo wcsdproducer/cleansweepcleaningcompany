@@ -169,7 +169,7 @@ export default function FAQPage() {
               
               <div className="space-y-8 p-4">
                 <h3 className="text-3xl font-bold text-[#1a6a91]">CleanSweep Resources</h3>
-                <div className="grid sm:grid-cols-2 gap-x-12 gap-y-4">
+                <div className="flex flex-col space-y-2">
                   {[
                     "FAQs", "Blog", "Contact", "Privacy Policy", "Terms of Service"
                   ].map((res) => (

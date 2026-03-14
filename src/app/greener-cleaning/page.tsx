@@ -10,9 +10,7 @@ import { Footer } from "@/components/Footer"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export default function GreenerCleaningPage() {
-  const heroImg = PlaceHolderImages.find(img => img.id === "greener-hero")
-  const babyDogImg = PlaceHolderImages.find(img => img.id === "greener-baby-dog")
-  const familyImg = PlaceHolderImages.find(img => img.id === "greener-family")
+  const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || ""
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -22,7 +20,7 @@ export default function GreenerCleaningPage() {
         {/* Hero Section */}
         <section className="relative h-[400px] w-full flex items-center">
           <Image
-            src={heroImg?.imageUrl || ""}
+            src={getImg("greener-hero")}
             alt="Greener Cleaning Hero"
             fill
             className="object-cover"
@@ -75,7 +73,7 @@ export default function GreenerCleaningPage() {
               <div className="relative">
                 <div className="relative h-[500px] w-full rounded-t-[100px] rounded-bl-[100px] overflow-hidden shadow-2xl">
                   <Image
-                    src={babyDogImg?.imageUrl || ""}
+                    src={getImg("greener-baby-dog")}
                     alt="Baby and Dog"
                     fill
                     className="object-cover"
@@ -94,7 +92,7 @@ export default function GreenerCleaningPage() {
               <div className="relative order-2 lg:order-1">
                 <div className="relative h-[500px] w-full rounded-t-[100px] rounded-br-[100px] overflow-hidden shadow-2xl border-8 border-white/10">
                   <Image
-                    src={familyImg?.imageUrl || ""}
+                    src={getImg("greener-family")}
                     alt="Family at home"
                     fill
                     className="object-cover"
@@ -146,7 +144,7 @@ export default function GreenerCleaningPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
               <div className="bg-[#1a6a91] p-12 rounded-3xl text-white space-y-8 relative overflow-hidden shadow-2xl min-h-[400px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                  <Image src="https://picsum.photos/seed/resource-bg/1000/800" alt="bg" fill className="object-cover" />
+                  <Image src={getImg("resource-bg")} alt="bg" fill className="object-cover" />
                 </div>
                 <div className="relative z-10 space-y-4">
                   <h2 className="text-4xl font-bold">Get started and see why cleaning is a big deal to us.</h2>
@@ -159,7 +157,7 @@ export default function GreenerCleaningPage() {
               
               <div className="space-y-8 p-4">
                 <h3 className="text-2xl font-bold text-[#1a6a91]">CleanSweep Resources</h3>
-                <div className="grid sm:grid-cols-2 gap-x-12 gap-y-4">
+                <div className="flex flex-col space-y-2">
                   {[
                     "FAQs", "Blog", "Contact", "Privacy Policy", "Terms of Service"
                   ].map((res) => (
