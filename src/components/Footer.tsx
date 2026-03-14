@@ -89,7 +89,7 @@ export function Footer() {
           <p>© 2026 CleanSweep Cleaning Company LLC. All rights reserved.</p>
           <div className="flex items-center gap-8">
             <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
-            <Link href="#" className="hover:text-primary">Terms of Service</Link>
+            <Link href="/terms-of-service" className="hover:text-primary">Terms of Service</Link>
           </div>
         </div>
       </div>
