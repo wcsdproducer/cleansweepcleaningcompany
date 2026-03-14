@@ -130,9 +130,13 @@ export default function BlogPage() {
                 <h3 className="text-2xl font-bold text-[#1a6a91]">CleanSweep Resources</h3>
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-4">
                   {[
-                    "FAQs", "Employment", "Gift Cards", "Press", "Contact", "Service Feedback", "Refer-Friends Get $50", "About Us"
+                    "FAQs", "Employment", "Press", "Contact", "Service Feedback", "Refer-Friends Get $50", "About Us", "Privacy Policy", "Terms of Service"
                   ].map((res) => (
-                    <Link key={res} href={res === 'Contact' ? '/contact' : '#'} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors py-3 border-b border-primary/10 group">
+                    <Link 
+                      key={res} 
+                      href={res === 'Contact' ? '/contact' : res === 'About Us' ? '/about' : res === 'FAQs' ? '/faq' : res === 'Privacy Policy' ? '/privacy-policy' : res === 'Terms of Service' ? '/terms-of-service' : '#'} 
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors py-3 border-b border-primary/10 group"
+                    >
                       <ChevronRight className="h-4 w-4 text-[#2eb086] group-hover:translate-x-1 transition-transform" />
                       {res}
                     </Link>

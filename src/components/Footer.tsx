@@ -66,9 +66,9 @@ export function Footer() {
             <h4 className="font-bold">Support</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
               <li><Link href="/faq" className="hover:text-primary transition-colors">FAQs</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Gift Cards</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors">Service Feedback</Link></li>
               <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 

@@ -4,7 +4,7 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, MapPin, CheckCircle2, Info } from "lucide-react"
+import { ArrowRight, MapPin, CheckCircle2, Info, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Navigation } from "@/components/Navigation"
@@ -205,7 +205,7 @@ export default function AboutPage() {
         <section className="py-20 bg-[#1a6a91]/5">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
-              <div className="bg-[#1a6a91] p-12 rounded-3xl text-white space-y-8 relative overflow-hidden shadow-2xl">
+              <div className="bg-[#1a6a91] p-12 rounded-3xl text-white space-y-8 relative overflow-hidden shadow-2xl min-h-[400px] flex flex-col justify-center">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
                   <Image src="https://picsum.photos/seed/resource-bg/1000/800" alt="bg" fill className="object-cover" />
                 </div>
@@ -223,10 +223,14 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-[#1a6a91]">CleanSweep Resources</h3>
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-4">
                   {[
-                    "FAQs", "Employment", "Gift Cards", "Blog", "Press", "Contact", "Service Feedback", "Refer-Friends Get $50"
+                    "FAQs", "Employment", "Blog", "Press", "Contact", "Service Feedback", "Refer-Friends Get $50", "Privacy Policy", "Terms of Service"
                   ].map((res) => (
-                    <Link key={res} href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors py-2 border-b border-primary/10">
-                      <CheckCircle2 className="h-4 w-4 text-[#2eb086]" />
+                    <Link 
+                      key={res} 
+                      href={res === 'FAQs' ? '/faq' : res === 'Contact' ? '/contact' : res === 'Blog' ? '/blog' : res === 'Privacy Policy' ? '/privacy-policy' : res === 'Terms of Service' ? '/terms-of-service' : '#'} 
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors py-2 border-b border-primary/10 group"
+                    >
+                      <ChevronRight className="h-4 w-4 text-[#2eb086] group-hover:translate-x-1 transition-transform" />
                       {res}
                     </Link>
                   ))}
