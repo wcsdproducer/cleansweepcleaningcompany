@@ -23,6 +23,24 @@
       "description": "Empty clean apartment for moving in",
       "imageUrl": "https://picsum.photos/seed/service-move/600/400",
       "imageHint": "empty apartment"
+    },
+    {
+      "id": "greener-hero",
+      "description": "Nature and clean home background",
+      "imageUrl": "https://picsum.photos/seed/greener-hero/1600/600",
+      "imageHint": "nature cleaning"
+    },
+    {
+      "id": "greener-baby-dog",
+      "description": "Baby and a small dog on a clean floor",
+      "imageUrl": "https://picsum.photos/seed/baby-dog/800/800",
+      "imageHint": "baby dog"
+    },
+    {
+      "id": "greener-family",
+      "description": "Family relaxing in a clean living room",
+      "imageUrl": "https://picsum.photos/seed/family-clean/1000/800",
+      "imageHint": "family home"
     }
   ]
 }
