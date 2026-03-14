@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     slug: "deep-cleaning-kitchen-guide",
     title: "The Ultimate Guide to Deep Cleaning Your Kitchen",
     excerpt: "Discover the professional secrets to a truly sanitized kitchen. From degreasing cabinets to sanitizing the sink, we cover it all.",
-    date: "2024-05-15",
+    date: "2026-01-05",
     category: "Cleaning Tips",
     author: "CleanSweep Editorial",
     image: "https://picsum.photos/seed/kitchen-clean/1200/600",
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     slug: "professional-cleaning-for-busy-parents",
     title: "Why Professional House Cleaning is a Game Changer for Busy Parents",
     excerpt: "Exhausted from balancing work and kids? See how a professional cleaning service can restore your sanity and give you back your weekends.",
-    date: "2024-05-10",
+    date: "2026-01-12",
     category: "Lifestyle",
     author: "CleanSweep Editorial",
     image: "https://picsum.photos/seed/busy-parents/1200/600",
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     slug: "eco-friendly-cleaning-benefits",
     title: "Eco-Friendly Cleaning: Good for You and the Planet",
     excerpt: "Learn why CleanSweep prioritizes green cleaning and how it benefits your family's health and the environment.",
-    date: "2024-05-05",
+    date: "2026-01-19",
     category: "Green Cleaning",
     author: "CleanSweep Editorial",
     image: "https://picsum.photos/seed/green-clean/1200/600",
@@ -98,7 +98,7 @@ export const blogPosts: BlogPost[] = [
     slug: "move-out-checklist-security-deposit",
     title: "Moving Out? Your Essential Cleaning Checklist for a Security Deposit Refund",
     excerpt: "Don't lose your security deposit! Follow our comprehensive move-out cleaning guide to ensure your landlord is impressed.",
-    date: "2024-04-30",
+    date: "2026-01-26",
     category: "Moving",
     author: "CleanSweep Editorial",
     image: "https://picsum.photos/seed/moving/1200/600",
@@ -122,23 +122,197 @@ export const blogPosts: BlogPost[] = [
       <h3>Floors: The Final Step</h3>
       <p>Once everything else is done, vacuum all carpets and mop all hard floors. If you have pets, consider a professional carpet steam clean, as many leases require this as a condition of the deposit return.</p>
     `
+  },
+  {
+    slug: "allergy-season-cleaning",
+    title: "How to Prepare Your Home for Allergy Season",
+    excerpt: "Combat pollen and dust with these professional cleaning strategies designed for allergy sufferers.",
+    date: "2026-02-02",
+    category: "Health",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/allergy/1200/600",
+    seoTitle: "Allergy Season Cleaning Tips | CleanSweep",
+    seoDescription: "Prepare your home for allergy season. Learn how professional cleaning reduces allergens like pollen and dust mites.",
+    content: `<p>Allergy season can be a nightmare for many homeowners. To keep your home a sanctuary, focus on removing allergens from every surface. Start with HEPA-filter vacuuming and damp dusting to trap particles rather than spreading them.</p><p>Our team at CleanSweep specializes in allergen reduction. We pay close attention to window sills, upholstery, and carpets where pollen likes to hide. Reclaim your breathing space with a professional deep clean.</p>`
+  },
+  {
+    slug: "post-holiday-recovery",
+    title: "Post-Holiday Home Recovery: A Cleaning Guide",
+    excerpt: "Reset your home after the chaos of the holidays with our recovery cleaning checklist.",
+    date: "2026-02-09",
+    category: "Home Maintenance",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/holiday-reset/1200/600",
+    seoTitle: "Post-Holiday Cleaning Reset | CleanSweep",
+    seoDescription: "Reset your home after the holidays. Our guide covers everything from tree needle removal to kitchen sanitization.",
+    content: `<p>The holidays are over, and your home likely shows the signs. From pine needles in the carpet to spills in the fridge, a reset is necessary. Start by decluttering any leftover decor and then move into a deep sanitization of high-traffic areas.</p><p>CleanSweep's one-time service is perfect for this transition, allowing you to enter the new year with a fresh, organized space.</p>`
+  },
+  {
+    slug: "organizing-small-spaces",
+    title: "Organizing Small Spaces for a Cleaner Look",
+    excerpt: "Maximize your square footage with these organization tips that make cleaning easier.",
+    date: "2026-02-14",
+    category: "Organization",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/small-space/1200/600",
+    seoTitle: "Small Space Organization Tips | CleanSweep",
+    seoDescription: "Learn how to organize small spaces to make cleaning more efficient. Expert advice from CleanSweep Cleaning Company LLC.",
+    content: `<p>Small homes can feel cluttered quickly. By utilizing vertical space and hidden storage, you can keep surfaces clear, which makes your weekly cleaning much faster. A clear home is a clean home.</p>`
+  },
+  {
+    slug: "cleaning-for-pet-owners",
+    title: "The Ultimate Guide for Pet Owners: Keeping Fur at Bay",
+    excerpt: "Managing pet hair and odors doesn't have to be a full-time job. Here is how the pros do it.",
+    date: "2026-02-18",
+    category: "Pet Care",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/pets/1200/600",
+    seoTitle: "House Cleaning Tips for Pet Owners | CleanSweep",
+    seoDescription: "Tackle pet hair and odors with professional techniques. Keep your home smelling fresh even with furry friends.",
+    content: `<p>Pets are family, but their fur isn't. Use a rubber squeegee on carpets to pull up hair that vacuums miss. Regular professional cleaning helps manage dander and keeps odors from setting into your fabrics.</p>`
+  },
+  {
+    slug: "importance-of-clean-baseboards",
+    title: "Why Clean Baseboards Make a Massive Difference",
+    excerpt: "Don't ignore the floor-level details. See why baseboards are the unsung heroes of a clean room.",
+    date: "2026-02-22",
+    category: "Cleaning Tips",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/baseboards/1200/600",
+    seoTitle: "Why Clean Baseboards Matter | CleanSweep",
+    seoDescription: "Discover how clean baseboards can brighten your entire home. A key part of the CleanSweep 49-Point Checklist.",
+    content: `<p>Baseboards gather dust that settles and turns into a dark line around your room. Wiping them down with a damp cloth instantly brightens the space. We include this in every CleanSweep visit because we know the details matter.</p>`
+  },
+  {
+    slug: "bathroom-mold-prevention",
+    title: "Preventing Bathroom Mold and Mildew",
+    excerpt: "Keep your bathroom a clean and healthy space with these moisture-fighting tips.",
+    date: "2026-02-28",
+    category: "Health",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/bathroom/1200/600",
+    seoTitle: "Bathroom Mold Prevention Tips | CleanSweep",
+    seoDescription: "Learn how to prevent mold and mildew in your bathroom. Professional advice on ventilation and cleaning.",
+    content: `<p>Humidity is the enemy. Always run your fan during and after showers. Weekly scrubbing of grout and tiles prevents the buildup of organic matter that mold feeds on.</p>`
+  },
+  {
+    slug: "spring-cleaning-masterlist",
+    title: "The 2026 Spring Cleaning Masterlist",
+    excerpt: "Our definitive checklist for a total home refresh this spring.",
+    date: "2026-03-02",
+    category: "Cleaning Tips",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/spring/1200/600",
+    seoTitle: "2026 Spring Cleaning Checklist | CleanSweep",
+    seoDescription: "The ultimate spring cleaning masterlist from CleanSweep. Deep clean every room with our expert guide.",
+    content: `<p>Spring cleaning is about more than just a quick tidy. It's about getting into the areas that are often missed throughout the year. From light fixtures to under the sofa, our masterlist covers it all.</p>`
+  },
+  {
+    slug: "cleaning-myth-busters",
+    title: "Cleaning Myth Busters: Does Vinegar Really Work?",
+    excerpt: "We separate fact from fiction when it comes to DIY cleaning solutions.",
+    date: "2026-03-05",
+    category: "Education",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/myth/1200/600",
+    seoTitle: "Common Cleaning Myths Debunked | CleanSweep",
+    seoDescription: "We debunk common cleaning myths. Find out if your DIY cleaners are actually effective.",
+    content: `<p>Vinegar is great for some things, but it shouldn't be used on granite or marble. We explain why choosing the right PH-balanced cleaner is essential for your home's surfaces.</p>`
+  },
+  {
+    slug: "work-from-home-office-cleaning",
+    title: "Cleaning Your Home Office for Maximum Productivity",
+    excerpt: "A clean workspace leads to a clear mind. Here's how to sanitize your home office.",
+    date: "2026-03-09",
+    category: "Lifestyle",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/office/1200/600",
+    seoTitle: "Home Office Cleaning for Productivity | CleanSweep",
+    seoDescription: "Boost your productivity with a clean home office. Learn how to sanitize your workspace effectively.",
+    content: `<p>Your keyboard and mouse carry more germs than you think. Regular sanitization of your desk area can reduce the spread of seasonal illness and help you stay focused on your work.</p>`
+  },
+  {
+    slug: "eco-friendly-laundry-tips",
+    title: "Eco-Friendly Laundry Tips for a Sustainable Home",
+    excerpt: "Extend the life of your clothes and reduce your impact with these green laundry habits.",
+    date: "2026-03-12",
+    category: "Green Cleaning",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/laundry/1200/600",
+    seoTitle: "Sustainable Laundry Habits | CleanSweep",
+    seoDescription: "Green your laundry routine. Tips on energy efficiency and eco-friendly detergents.",
+    content: `<p>Washing in cold water and using concentrated detergents saves energy and reduces waste. It's another way CleanSweep supports a greener lifestyle for our clients.</p>`
+  },
+  {
+    slug: "importance-of-window-cleaning",
+    title: "The Impact of Clean Windows on Your Mood",
+    excerpt: "Let the light in! Why clean windows are essential for a happy home.",
+    date: "2026-03-15",
+    category: "Home Maintenance",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/windows/1200/600",
+    seoTitle: "Benefits of Clean Windows | CleanSweep",
+    seoDescription: "Discover how clean windows improve natural light and mood. Part of our professional cleaning services.",
+    content: `<p>Clean windows allow more natural light into your home, which is proven to boost mood and vitamin D levels. Our team handles the interior windows to ensure a streak-free view.</p>`
+  },
+  {
+    slug: "cleaning-for-new-homeowners",
+    title: "First-Time Homeowner's Cleaning Guide",
+    excerpt: "Just got the keys? Here's the first thing you should do before moving in.",
+    date: "2026-03-18",
+    category: "Moving",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/new-home/1200/600",
+    seoTitle: "Move-In Cleaning for New Homeowners | CleanSweep",
+    seoDescription: "Essential cleaning steps for new homeowners. Start fresh in your new space with CleanSweep.",
+    content: `<p>Before you bring in the boxes, ensure the space is sanitized. A professional move-in clean removes the history of the previous owners and gives you a truly fresh start.</p>`
+  },
+  {
+    slug: "reducing-indoor-air-pollution",
+    title: "Reducing Indoor Air Pollution Through Cleaning",
+    excerpt: "Your home's air might be more polluted than the outdoors. Here is how to fix it.",
+    date: "2026-03-21",
+    category: "Health",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/air/1200/600",
+    seoTitle: "Improve Indoor Air Quality | CleanSweep",
+    seoDescription: "Clean your way to better air. How professional dusting and vacuuming reduces indoor pollution.",
+    content: `<p>Dust, dander, and chemical residues contribute to poor indoor air quality. Frequent cleaning with the right tools is the best way to keep your air breathable and fresh.</p>`
+  },
+  {
+    slug: "cleaning-check-for-seniors",
+    title: "Maintaining a Clean Home for Seniors",
+    excerpt: "Special considerations for keeping senior living spaces safe and sanitary.",
+    date: "2026-03-24",
+    category: "Lifestyle",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/seniors/1200/600",
+    seoTitle: "Cleaning Services for Seniors | CleanSweep",
+    seoDescription: "Safe and thorough cleaning for seniors. How CleanSweep supports aging in place.",
+    content: `<p>For seniors, a clean home is a matter of safety. Reducing clutter and ensuring floors are non-slip are top priorities for our specialized senior cleaning visits.</p>`
+  },
+  {
+    slug: "preparing-for-house-guests",
+    title: "Hosting 101: Preparing Your Home for Guests",
+    excerpt: "Impress your visitors with a home that sparkles from the guest room to the kitchen.",
+    date: "2026-03-27",
+    category: "Lifestyle",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/guests/1200/600",
+    seoTitle: "Host Prep Cleaning Tips | CleanSweep",
+    seoDescription: "Get your home guest-ready. Professional tips on cleaning and organizing for visitors.",
+    content: `<p>Don't stress over the hosting. Focus on the menu while we handle the guest bathroom and common areas. A clean home makes guests feel truly welcome.</p>`
+  },
+  {
+    slug: "the-value-of-recurring-cleaning",
+    title: "The Long-Term Value of Recurring Cleaning Services",
+    excerpt: "See why a weekly or bi-weekly visit is more than just a luxury—it's an investment.",
+    date: "2026-03-30",
+    category: "Education",
+    author: "CleanSweep Editorial",
+    image: "https://picsum.photos/seed/value/1200/600",
+    seoTitle: "Benefits of Recurring Cleaning | CleanSweep",
+    seoDescription: "Investment in your home's health. Why recurring cleaning services are worth it.",
+    content: `<p>Consistent maintenance prevents the build-up of grime that can damage your home's finishes over time. Save money on future renovations by keeping things clean today.</p>`
   }
-  // ... Additional 16 posts would be defined here with similar length and quality.
-  // For brevity in this response, I am providing the structure and first 4 detailed posts.
-  // I will fill the array with 20 items to satisfy the routing.
-].concat(Array.from({ length: 16 }, (_, i) => ({
-  slug: `blog-post-${i + 5}`,
-  title: `House Cleaning Excellence Topic ${i + 5}`,
-  excerpt: `Expert insights into professional cleaning services and how they improve your home life.`,
-  date: "2024-04-01",
-  category: "Home Maintenance",
-  author: "CleanSweep Editorial",
-  image: `https://picsum.photos/seed/blog-${i+5}/1200/600`,
-  seoTitle: `House Cleaning Topic ${i + 5} | CleanSweep`,
-  seoDescription: `Detailed professional cleaning advice from CleanSweep Cleaning Company LLC.`,
-  content: `<p>This is a detailed article about house cleaning excellence. At CleanSweep Cleaning Company LLC, we focus on high-quality service and customer satisfaction. Regular maintenance of your home is crucial for longevity and health.</p>
-            <p>Our 49-Point Checklist ensures that every corner of your home is addressed. Whether you need a deep clean or a regular recurring service, our team of professionals is trained to deliver consistent results.</p>
-            <p>A clean home promotes productivity and reduces the spread of illnesses. By hiring professionals, you ensure that the right tools and products are used for every surface, from delicate marble to durable hardwood.</p>
-            <p>We take pride in our "Greener Cleaning" approach, utilizing sustainable practices and eco-friendly products that are safe for your family and the environment. Join the thousands of happy homeowners who trust CleanSweep for their cleaning needs.</p>
-            <p>Don't let chores take over your life. Reclaim your weekends and enjoy a sparkling clean home without lifting a finger.</p>`
-})));
+];
