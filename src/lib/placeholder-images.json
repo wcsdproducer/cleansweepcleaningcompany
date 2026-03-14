@@ -124,7 +124,7 @@
       "id": "blog-2",
       "description": "Cleaning for Busy Parents",
       "imageUrl": "https://picsum.photos/seed/blog-busy-family/800/600",
-      "imageHint": "happy family"
+      "imageHint": "cleaning house"
     },
     {
       "id": "blog-3",
@@ -136,7 +136,7 @@
       "id": "blog-4",
       "description": "Move-Out Cleaning",
       "imageUrl": "https://picsum.photos/seed/blog-moving-out/800/600",
-      "imageHint": "moving out"
+      "imageHint": "moving cleaning"
     },
     {
       "id": "blog-5",
@@ -148,31 +148,31 @@
       "id": "blog-6",
       "description": "Post-Holiday Recovery",
       "imageUrl": "https://picsum.photos/seed/blog-holiday-reset/800/600",
-      "imageHint": "holiday home"
+      "imageHint": "holiday cleaning"
     },
     {
       "id": "blog-7",
       "description": "Organizing Small Spaces",
       "imageUrl": "https://picsum.photos/seed/blog-organized-room/800/600",
-      "imageHint": "organized room"
+      "imageHint": "organizing cleaning"
     },
     {
       "id": "blog-8",
       "description": "Cleaning for Pet Owners",
       "imageUrl": "https://picsum.photos/seed/blog-pet-fur/800/600",
-      "imageHint": "pet dog"
+      "imageHint": "pet cleaning"
     },
     {
       "id": "blog-9",
       "description": "Clean Baseboards",
       "imageUrl": "https://picsum.photos/seed/blog-baseboards/800/600",
-      "imageHint": "clean baseboards"
+      "imageHint": "baseboard cleaning"
     },
     {
       "id": "blog-10",
       "description": "Bathroom Mold Prevention",
       "imageUrl": "https://picsum.photos/seed/blog-bathroom-tiles/800/600",
-      "imageHint": "bathroom tiles"
+      "imageHint": "bathroom scrubbing"
     },
     {
       "id": "blog-11",
@@ -190,49 +190,49 @@
       "id": "blog-13",
       "description": "Home Office Cleaning",
       "imageUrl": "https://picsum.photos/seed/blog-home-office/800/600",
-      "imageHint": "home office"
+      "imageHint": "office cleaning"
     },
     {
       "id": "blog-14",
       "description": "Eco-Friendly Laundry Tips",
       "imageUrl": "https://picsum.photos/seed/blog-laundry-room/800/600",
-      "imageHint": "laundry room"
+      "imageHint": "laundry cleaning"
     },
     {
       "id": "blog-15",
       "description": "Importance of Window Cleaning",
       "imageUrl": "https://picsum.photos/seed/blog-clean-windows/800/600",
-      "imageHint": "clean window"
+      "imageHint": "window cleaning"
     },
     {
       "id": "blog-16",
       "description": "First-Time Homeowner Guide",
       "imageUrl": "https://picsum.photos/seed/blog-new-house/800/600",
-      "imageHint": "new house"
+      "imageHint": "house cleaning"
     },
     {
       "id": "blog-17",
       "description": "Reducing Air Pollution",
       "imageUrl": "https://picsum.photos/seed/blog-fresh-air/800/600",
-      "imageHint": "fresh air"
+      "imageHint": "vacuum cleaning"
     },
     {
       "id": "blog-18",
       "description": "Cleaning for Seniors",
       "imageUrl": "https://picsum.photos/seed/blog-senior-home/800/600",
-      "imageHint": "senior home"
+      "imageHint": "senior cleaning"
     },
     {
       "id": "blog-19",
       "description": "Preparing for House Guests",
       "imageUrl": "https://picsum.photos/seed/blog-guest-bedroom/800/600",
-      "imageHint": "guest bedroom"
+      "imageHint": "guest cleaning"
     },
     {
       "id": "blog-20",
       "description": "Value of Recurring Cleaning",
       "imageUrl": "https://picsum.photos/seed/blog-housekeeping/800/600",
-      "imageHint": "housekeeping service"
+      "imageHint": "professional cleaning"
     }
   ]
 }
