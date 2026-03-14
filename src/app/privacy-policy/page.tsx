@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -16,7 +15,7 @@ export default function PrivacyPolicyPage() {
           
           <div className="prose prose-blue max-w-none text-muted-foreground space-y-8">
             <section>
-              <p className="text-sm font-medium italic">Last Updated: May 20, 2024</p>
+              <p className="text-sm font-medium italic">Last Updated: February 20, 2026</p>
               <p className="mt-4">
                 At CleanSweep Cleaning Company LLC, we are committed to protecting your privacy. This Privacy Policy describes how we collect, use, and share your personal information when you visit our website (the "Site") or use our professional cleaning services.
               </p>
