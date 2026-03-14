@@ -24,7 +24,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-muted-foreground max-w-xs leading-relaxed">
-              Professional residential cleaning services that give you the time to focus on what matters most. Locally owned, bonded, and insured.
+              Professional residential cleaning services that give you the time to focus on what matters most. Bonded and insured.
             </p>
             <div className="flex items-center gap-4">
               <Link href="#" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-white transition-all">
@@ -45,11 +45,12 @@ export function Footer() {
           <div className="space-y-6">
             <h4 className="font-bold">Services</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
-              <li><Link href="/services/regular" className="hover:text-primary transition-colors">House Cleaning</Link></li>
-              <li><Link href="/services/deep-clean" className="hover:text-primary transition-colors">Deep Cleaning</Link></li>
-              <li><Link href="/services/move-in-out" className="hover:text-primary transition-colors">Move In/Out</Link></li>
+              <li><Link href="/services/one-time" className="hover:text-primary transition-colors">One-time Service</Link></li>
+              <li><Link href="/services/regular" className="hover:text-primary transition-colors">Regular Service</Link></li>
+              <li><Link href="/services/deep-clean" className="hover:text-primary transition-colors">Deep Clean Service</Link></li>
+              <li><Link href="/services/move-in-out" className="hover:text-primary transition-colors">Move-in/Move-out service</Link></li>
               <li><Link href="/specialty/housekeeping" className="hover:text-primary transition-colors">Housekeeping</Link></li>
-              <li><Link href="/#checklist" className="hover:text-primary transition-colors">Checklist</Link></li>
+              <li><Link href="/#checklist" className="hover:text-primary transition-colors">49-Point Checklist</Link></li>
             </ul>
           </div>
 
