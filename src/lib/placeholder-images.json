@@ -113,6 +113,126 @@
       "description": "Blog teaser 4",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FCleanSweep%20Image%2004.png?alt=media&token=00eba09e-9408-4cf0-aa81-0a5fe937ada3",
       "imageHint": "clean bathroom"
+    },
+    {
+      "id": "blog-1",
+      "description": "Deep cleaning kitchen",
+      "imageUrl": "https://picsum.photos/seed/blog1/800/600",
+      "imageHint": "clean kitchen"
+    },
+    {
+      "id": "blog-2",
+      "description": "Parents and kids in clean home",
+      "imageUrl": "https://picsum.photos/seed/blog2/800/600",
+      "imageHint": "happy family"
+    },
+    {
+      "id": "blog-3",
+      "description": "Eco friendly cleaning products",
+      "imageUrl": "https://picsum.photos/seed/blog3/800/600",
+      "imageHint": "green cleaning"
+    },
+    {
+      "id": "blog-4",
+      "description": "Empty clean apartment",
+      "imageUrl": "https://picsum.photos/seed/blog4/800/600",
+      "imageHint": "empty house"
+    },
+    {
+      "id": "blog-5",
+      "description": "Dusting surfaces for allergies",
+      "imageUrl": "https://picsum.photos/seed/blog5/800/600",
+      "imageHint": "dust cleaning"
+    },
+    {
+      "id": "blog-6",
+      "description": "Holiday decorations and clean home",
+      "imageUrl": "https://picsum.photos/seed/blog6/800/600",
+      "imageHint": "holiday decor"
+    },
+    {
+      "id": "blog-7",
+      "description": "Organized small closet",
+      "imageUrl": "https://picsum.photos/seed/blog7/800/600",
+      "imageHint": "organized space"
+    },
+    {
+      "id": "blog-8",
+      "description": "Dog on a clean rug",
+      "imageUrl": "https://picsum.photos/seed/blog8/800/600",
+      "imageHint": "pet home"
+    },
+    {
+      "id": "blog-9",
+      "description": "Detailed cleaning of baseboards",
+      "imageUrl": "https://picsum.photos/seed/blog9/800/600",
+      "imageHint": "baseboard cleaning"
+    },
+    {
+      "id": "blog-10",
+      "description": "Clean bathroom tiles",
+      "imageUrl": "https://picsum.photos/seed/blog10/800/600",
+      "imageHint": "clean bathroom"
+    },
+    {
+      "id": "blog-11",
+      "description": "Spring cleaning essentials",
+      "imageUrl": "https://picsum.photos/seed/blog11/800/600",
+      "imageHint": "spring cleaning"
+    },
+    {
+      "id": "blog-12",
+      "description": "Vinegar and natural cleaning",
+      "imageUrl": "https://picsum.photos/seed/blog12/800/600",
+      "imageHint": "vinegar cleaning"
+    },
+    {
+      "id": "blog-13",
+      "description": "Clean home office workspace",
+      "imageUrl": "https://picsum.photos/seed/blog13/800/600",
+      "imageHint": "home office"
+    },
+    {
+      "id": "blog-14",
+      "description": "Eco friendly laundry room",
+      "imageUrl": "https://picsum.photos/seed/blog14/800/600",
+      "imageHint": "green laundry"
+    },
+    {
+      "id": "blog-15",
+      "description": "Sunshine through a clean window",
+      "imageUrl": "https://picsum.photos/seed/blog15/800/600",
+      "imageHint": "clean window"
+    },
+    {
+      "id": "blog-16",
+      "description": "New home keys and clean space",
+      "imageUrl": "https://picsum.photos/seed/blog16/800/600",
+      "imageHint": "new house"
+    },
+    {
+      "id": "blog-17",
+      "description": "Fresh air and plants in home",
+      "imageUrl": "https://picsum.photos/seed/blog17/800/600",
+      "imageHint": "fresh air"
+    },
+    {
+      "id": "blog-18",
+      "description": "Clean and safe senior living",
+      "imageUrl": "https://picsum.photos/seed/blog18/800/600",
+      "imageHint": "senior care"
+    },
+    {
+      "id": "blog-19",
+      "description": "Guest ready living room",
+      "imageUrl": "https://picsum.photos/seed/blog19/800/600",
+      "imageHint": "guest home"
+    },
+    {
+      "id": "blog-20",
+      "description": "Professional cleaning equipment",
+      "imageUrl": "https://picsum.photos/seed/blog20/800/600",
+      "imageHint": "cleaning service"
     }
   ]
 }
