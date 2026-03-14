@@ -13,12 +13,10 @@ import {
 } from "@/components/ui/popover"
 
 const cleaningTypes = [
-  { name: "House Cleaning", href: "/services/house-cleaning" },
-  { name: "Apartment Cleaning", href: "/services/apartment-cleaning" },
-  { name: "Condo Cleaning", href: "/services/condo-cleaning" },
-  { name: "Deep Clean", href: "/services/deep-clean" },
-  { name: "Maid Service", href: "/services/maid-service" },
-  { name: "Commercial Cleaning", href: "/services/commercial-cleaning" },
+  { name: "One-time Service", href: "/services/one-time" },
+  { name: "Regular Service", href: "/services/regular" },
+  { name: "Deep Clean Service", href: "/services/deep-clean" },
+  { name: "Move-in/Move-out service", href: "/services/move-in-out" },
 ]
 
 const areasWeClean = [
@@ -26,13 +24,6 @@ const areasWeClean = [
   { name: "Kitchens", href: "/areas/kitchens" },
   { name: "Living Areas", href: "/areas/living-areas" },
   { name: "Sleeping Areas", href: "/areas/sleeping-areas" },
-]
-
-const cleaningSchedules = [
-  { name: "Recurring Cleaning", href: "/schedules/recurring-cleaning" },
-  { name: "Move In/Move Out", href: "/schedules/move-in-out" },
-  { name: "One-Time Cleaning", href: "/schedules/one-time" },
-  { name: "Customized Cleaning", href: "/schedules/customized" },
 ]
 
 const specialtyCleaning = [
@@ -84,10 +75,9 @@ export function Navigation() {
               </button>
             </PopoverTrigger>
             <PopoverContent className="w-[100vw] max-w-5xl p-0 mt-4 border-none shadow-2xl rounded-3xl overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-10 bg-white">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10 bg-white">
                 <MenuSection title="CLEANING TYPES" items={cleaningTypes} />
                 <MenuSection title="AREAS WE CLEAN" items={areasWeClean} />
-                <MenuSection title="CLEANING SCHEDULES" items={cleaningSchedules} />
                 <MenuSection title="SPECIALTY CLEANING" items={specialtyCleaning} />
               </div>
               <div className="bg-[#1a6a91] p-8 flex flex-col md:flex-row items-center justify-between gap-6">

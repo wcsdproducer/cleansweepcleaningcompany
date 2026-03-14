@@ -3,41 +3,29 @@ import { ServicePageTemplate } from "@/components/ServicePageTemplate"
 import { notFound } from "next/navigation"
 
 const serviceData: Record<string, any> = {
-  "house-cleaning": {
-    title: "House Cleaning",
-    description: "Our signature professional house cleaning service tailored to your home's unique needs.",
-    imageHint: "clean living room",
-    features: ["Reliable Weekly Visits", "Trained Professionals", "Flexible Scheduling", "Eco-Friendly Products"]
+  "one-time": {
+    title: "One-Time Service",
+    description: "A single, thorough visit to get your home back to its best state. Perfect for events or seasonal refreshes.",
+    imageHint: "home cleaning",
+    features: ["Flexible Scheduling", "Full 49-Point Checklist", "No Commitment", "Ready for Guests"]
   },
-  "apartment-cleaning": {
-    title: "Apartment Cleaning",
-    description: "Expert cleaning services optimized for apartment living. Big or small, we clean it all.",
-    imageHint: "modern apartment",
-    features: ["Space-Efficient Cleaning", "Customized Plans", "Evening & Weekend Availability", "Trusted & Insured"]
-  },
-  "condo-cleaning": {
-    title: "Condo Cleaning",
-    description: "Premium cleaning services designed for condominium residents and their specific building requirements.",
-    imageHint: "clean kitchen",
-    features: ["Building Rule Compliance", "Quick Turnaround", "High-Quality Equipment", "Discreet & Professional"]
+  "regular": {
+    title: "Regular Service",
+    description: "Maintenance plans that keep your home sparkling year-round on a schedule that works for you.",
+    imageHint: "calendar cleaning",
+    features: ["Weekly/Bi-Weekly/Monthly", "Same Pro Every Time", "No Long-Term Contracts", "Predictable Budgeting"]
   },
   "deep-clean": {
-    title: "Deep Clean",
-    description: "A comprehensive, corner-to-corner cleaning that refreshes your entire living space.",
+    title: "Deep Clean Service",
+    description: "A comprehensive, corner-to-corner cleaning that refreshes your entire living space with intense scrubbing and high-detail attention.",
     imageHint: "detailed bathroom",
     features: ["Heavy Scrubbing Included", "Inside Appliances", "Wall Washing", "Baseboards & Vents"]
   },
-  "maid-service": {
-    title: "Maid Service",
-    description: "Personalized housekeeping and maid services for ongoing home maintenance.",
-    imageHint: "maid cleaning",
-    features: ["Assigned Cleaning Pro", "Tidying & Organizing", "Bed Making", "Laundry Options"]
-  },
-  "commercial-cleaning": {
-    title: "Commercial Cleaning",
-    description: "Professional cleaning solutions for offices, retail spaces, and commercial properties.",
-    imageHint: "clean office",
-    features: ["Post-Hours Service", "Safe Sanitization", "Uniformed Professionals", "Reliable Performance"]
+  "move-in-out": {
+    title: "Move-in/Move-out Service",
+    description: "Stress-free cleaning for your big transition. We handle the scrubbing while you handle the boxes.",
+    imageHint: "empty house",
+    features: ["Inside Cabinet Cleaning", "Appliance Interiors", "Floor Polishing", "Detailed Sanitization"]
   }
 }
 
