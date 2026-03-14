@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-home",
+      "description": "A bright, clean, modern living room",
+      "imageUrl": "https://picsum.photos/seed/sparkle-hero/1200/800",
+      "imageHint": "modern living room"
+    },
+    {
+      "id": "service-standard",
+      "description": "Professional cleaning of a kitchen countertop",
+      "imageUrl": "https://picsum.photos/seed/service-kitchen/600/400",
+      "imageHint": "clean kitchen"
+    },
+    {
+      "id": "service-deep",
+      "description": "Deep cleaning of a bathroom",
+      "imageUrl": "https://picsum.photos/seed/service-bath/600/400",
+      "imageHint": "clean bathroom"
+    },
+    {
+      "id": "service-moving",
+      "description": "Empty clean apartment for moving in",
+      "imageUrl": "https://picsum.photos/seed/service-move/600/400",
+      "imageHint": "empty apartment"
+    }
+  ]
 }
