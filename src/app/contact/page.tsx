@@ -40,9 +40,9 @@ export default function ContactPage() {
         </section>
 
         <section className="container mx-auto px-4 -mt-16 relative z-20">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-5 gap-8">
             {/* Contact Info Cards */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-2 space-y-6">
               {[
                 { icon: Phone, title: "Phone", content: "877-318-4816", sub: "Mon-Fri: 8am - 6pm" },
                 { icon: Mail, title: "Email", content: "info@cleansweepcleaningcompany.com", sub: "Support 24/7" },
@@ -50,12 +50,14 @@ export default function ContactPage() {
               ].map((item, idx) => (
                 <Card key={idx} className="rounded-3xl shadow-xl border-none">
                   <CardContent className="p-8 flex items-center gap-6">
-                    <div className="bg-primary/10 p-4 rounded-2xl text-primary">
+                    <div className="bg-primary/10 p-4 rounded-2xl text-primary shrink-0">
                       <item.icon className="h-6 w-6" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{item.title}</p>
-                      <p className="text-xl font-bold text-[#1a6a91] leading-tight">{item.content}</p>
+                      <p className="text-lg md:text-xl font-bold text-[#1a6a91] leading-tight break-words md:break-normal">
+                        {item.content}
+                      </p>
                       <p className="text-sm text-muted-foreground">{item.sub}</p>
                     </div>
                   </CardContent>
@@ -64,7 +66,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-3">
               <Card className="rounded-[40px] shadow-2xl border-none overflow-hidden">
                 <CardContent className="p-10 md:p-16">
                   <form onSubmit={handleSubmit} className="space-y-8">
