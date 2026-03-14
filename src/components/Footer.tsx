@@ -76,10 +76,8 @@ export function Footer() {
           <div className="space-y-6">
             <h4 className="font-bold">Locations</h4>
             <ul className="space-y-4 text-muted-foreground text-sm">
-              <li><Link href="#" className="hover:text-primary transition-colors">Austin, TX</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Boston, MA</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">San Diego, CA</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Chicago, IL</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Wesley Chapel, FL</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">New Tampa, FL</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Find a Location</Link></li>
             </ul>
           </div>
