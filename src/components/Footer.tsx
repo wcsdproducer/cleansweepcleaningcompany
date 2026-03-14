@@ -88,8 +88,8 @@ export function Footer() {
         <div className="pt-12 border-t flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <p>© 2026 CleanSweep Cleaning Company LLC. All rights reserved.</p>
           <div className="flex items-center gap-8">
-            <Link href="#" className="hover:text-primary">Terms of Service</Link>
             <Link href="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
+            <Link href="#" className="hover:text-primary">Terms of Service</Link>
           </div>
         </div>
       </div>
