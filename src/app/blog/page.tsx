@@ -12,6 +12,22 @@ import { Footer } from "@/components/Footer"
 import { blogPosts } from "@/lib/blog-posts"
 
 export default function BlogPage() {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Helper to safely format dates only on the client to avoid hydration mismatches
+  const formatDate = (dateStr: string) => {
+    if (!mounted) return null
+    try {
+      return new Date(dateStr).toLocaleDateString()
+    } catch (e) {
+      return dateStr
+    }
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
@@ -59,7 +75,7 @@ export default function BlogPage() {
                     <div className="flex items-center gap-4 text-xs font-bold text-muted-foreground uppercase tracking-wider">
                       <span className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
-                        {new Date(post.date).toLocaleDateString()}
+                        {formatDate(post.date)}
                       </span>
                     </div>
                     <Link href={`/blog/${post.slug}`} className="block group-hover:text-primary transition-colors">
