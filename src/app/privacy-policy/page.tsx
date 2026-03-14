@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
                 <p className="font-bold text-[#1a6a91]">CleanSweep Cleaning Company LLC</p>
                 <p>Email: info@cleansweepcleaningcompany.com</p>
                 <p>Phone: 877-624-3776</p>
-                <p>Address: 123 Clean St, Austin, TX</p>
+                <p>Address: 8720 Woodland Center Blvd, Tampa, FL 33614</p>
               </div>
             </section>
           </div>

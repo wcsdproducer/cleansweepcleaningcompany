@@ -46,7 +46,7 @@ export default function ContactPage() {
               {[
                 { icon: Phone, title: "Phone", content: "877-624-3776", sub: "Mon-Fri: 8am - 6pm" },
                 { icon: Mail, title: "Email", content: "info@cleansweepcleaningcompany.com", sub: "Support 24/7" },
-                { icon: MapPin, title: "Main Office", content: "123 Clean St, Austin, TX", sub: "Headquarters" }
+                { icon: MapPin, title: "Main Office", content: "8720 Woodland Center Blvd, Tampa, FL 33614", sub: "Headquarters" }
               ].map((item, idx) => (
                 <Card key={idx} className="rounded-3xl shadow-xl border-none">
                   <CardContent className="p-8 flex items-center gap-6">
@@ -55,7 +55,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{item.title}</p>
-                      <p className="text-xl font-bold text-[#1a6a91]">{item.content}</p>
+                      <p className="text-xl font-bold text-[#1a6a91] leading-tight">{item.content}</p>
                       <p className="text-sm text-muted-foreground">{item.sub}</p>
                     </div>
                   </CardContent>
@@ -106,7 +106,7 @@ export default function ContactPage() {
             Check out our frequently asked questions for instant help with scheduling, pricing, and service details.
           </p>
           <Button variant="outline" className="rounded-xl border-[#1a6a91] text-[#1a6a91] h-12 px-8 font-bold" asChild>
-            <a href="/#faq">View FAQs</a>
+            <a href="/faq">View FAQs</a>
           </Button>
         </section>
       </main>
