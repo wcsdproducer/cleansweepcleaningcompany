@@ -45,7 +45,7 @@ export default function ContactPage() {
             <div className="lg:col-span-1 space-y-6">
               {[
                 { icon: Phone, title: "Phone", content: "877-624-3776", sub: "Mon-Fri: 8am - 6pm" },
-                { icon: Mail, title: "Email", content: "hello@cleansweep.com", sub: "Support 24/7" },
+                { icon: Mail, title: "Email", content: "info@cleansweepcleaningcompany.com", sub: "Support 24/7" },
                 { icon: MapPin, title: "Main Office", content: "123 Clean St, Austin, TX", sub: "Headquarters" }
               ].map((item, idx) => (
                 <Card key={idx} className="rounded-3xl shadow-xl border-none">
