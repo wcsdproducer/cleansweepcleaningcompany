@@ -29,14 +29,11 @@ const areasWeClean = [
   { name: "Sleeping Areas", href: "/areas/sleeping-areas" },
 ]
 
-const specialtyCleaning = [
-  { name: "Special Event Cleaning", href: "/specialty/special-event" },
-  { name: "Cleaning for Seniors", href: "/specialty/seniors" },
-  { name: "Post-Renovation Cleaning", href: "/specialty/post-renovation" },
-  { name: "Rental Property Cleaning", href: "/specialty/rental-property" },
-  { name: "Holiday Cleaning", href: "/specialty/holiday" },
-  { name: "Home Sale Prep Cleaning", href: "/specialty/home-sale-prep" },
-  { name: "Add-On Cleaning", href: "/specialty/add-on" },
+const supportItems = [
+  { name: "FAQs", href: "/faq" },
+  { name: "Service Feedback", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms of Service", href: "/terms-of-service" },
 ]
 
 const whyCleanSweep = [
@@ -92,7 +89,7 @@ export function Navigation() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-10 bg-white">
                 <MenuSection title="CLEANING TYPES" items={cleaningTypes} />
                 <MenuSection title="AREAS WE CLEAN" items={areasWeClean} />
-                <MenuSection title="SPECIALTY CLEANING" items={specialtyCleaning} />
+                <MenuSection title="SUPPORT" items={supportItems} />
               </div>
               <div className="bg-[#1a6a91] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-white">
@@ -158,9 +155,9 @@ export function Navigation() {
         <div className="md:hidden absolute top-full left-0 w-full bg-background border-b animate-in slide-in-from-top duration-300 shadow-xl">
           <nav className="flex flex-col p-6 gap-6">
             <div className="space-y-4">
-              <div className="font-bold text-primary uppercase text-xs tracking-widest px-2">Services</div>
+              <div className="font-bold text-primary uppercase text-xs tracking-widest px-2">Services & Support</div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {[...cleaningTypes, ...areasWeClean].map((item) => (
+                {[...cleaningTypes, ...areasWeClean, ...supportItems].map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
