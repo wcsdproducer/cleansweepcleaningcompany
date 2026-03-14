@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Phone, Mail, MapPin, Sparkles, Send } from "lucide-react"
+import { Sparkles, Send } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
 
@@ -40,61 +40,35 @@ export default function ContactPage() {
         </section>
 
         <section className="container mx-auto px-4 -mt-16 relative z-20">
-          <div className="grid lg:grid-cols-5 gap-8">
-            {/* Contact Info Cards */}
-            <div className="lg:col-span-2 space-y-6">
-              {[
-                { icon: Phone, title: "Phone", content: "877-318-4816", sub: "Mon-Fri: 8am - 6pm" },
-                { icon: Mail, title: "Email", content: "info@cleansweepcleaningcompany.com", sub: "Support 24/7" },
-                { icon: MapPin, title: "Main Office", content: "3360 S Richfield Way, Aurora, CO 80013", sub: "Headquarters" }
-              ].map((item, idx) => (
-                <Card key={idx} className="rounded-3xl shadow-xl border-none">
-                  <CardContent className="p-8 flex items-center gap-6">
-                    <div className="bg-primary/10 p-4 rounded-2xl text-primary shrink-0">
-                      <item.icon className="h-6 w-6" />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{item.title}</p>
-                      <p className="text-lg md:text-xl font-bold text-[#1a6a91] leading-tight break-words md:break-normal">
-                        {item.content}
-                      </p>
-                      <p className="text-sm text-muted-foreground">{item.sub}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-3">
-              <Card className="rounded-[40px] shadow-2xl border-none overflow-hidden">
-                <CardContent className="p-10 md:p-16">
-                  <form onSubmit={handleSubmit} className="space-y-8">
-                    <div className="grid md:grid-cols-2 gap-8">
-                      <div className="space-y-3">
-                        <Label htmlFor="name" className="text-lg font-semibold">Full Name</Label>
-                        <Input id="name" placeholder="John Doe" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" required />
-                      </div>
-                      <div className="space-y-3">
-                        <Label htmlFor="email" className="text-lg font-semibold">Email Address</Label>
-                        <Input id="email" type="email" placeholder="john@example.com" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" required />
-                      </div>
+          <div className="max-w-3xl mx-auto">
+            {/* Centered Contact Form */}
+            <Card className="rounded-[40px] shadow-2xl border-none overflow-hidden">
+              <CardContent className="p-10 md:p-16">
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                      <Label htmlFor="name" className="text-lg font-semibold">Full Name</Label>
+                      <Input id="name" placeholder="John Doe" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" required />
                     </div>
                     <div className="space-y-3">
-                      <Label htmlFor="subject" className="text-lg font-semibold">Subject</Label>
-                      <Input id="subject" placeholder="General Inquiry" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" />
+                      <Label htmlFor="email" className="text-lg font-semibold">Email Address</Label>
+                      <Input id="email" type="email" placeholder="john@example.com" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" required />
                     </div>
-                    <div className="space-y-3">
-                      <Label htmlFor="message" className="text-lg font-semibold">Message</Label>
-                      <Textarea id="message" placeholder="How can we help you?" className="min-h-[200px] rounded-[30px] border-muted bg-secondary/5 focus:ring-primary p-6" required />
-                    </div>
-                    <Button type="submit" className="w-full h-16 rounded-2xl text-xl font-bold bg-[#2eb086] hover:bg-[#25916e] shadow-xl gap-3 transition-all active:scale-[0.98]">
-                      Send Message <Send className="h-5 w-5" />
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
+                  </div>
+                  <div className="space-y-3">
+                    <Label htmlFor="subject" className="text-lg font-semibold">Subject</Label>
+                    <Input id="subject" placeholder="General Inquiry" className="h-14 rounded-2xl border-muted bg-secondary/5 focus:ring-primary" />
+                  </div>
+                  <div className="space-y-3">
+                    <Label htmlFor="message" className="text-lg font-semibold">Message</Label>
+                    <Textarea id="message" placeholder="How can we help you?" className="min-h-[200px] rounded-[30px] border-muted bg-secondary/5 focus:ring-primary p-6" required />
+                  </div>
+                  <Button type="submit" className="w-full h-16 rounded-2xl text-xl font-bold bg-[#2eb086] hover:bg-[#25916e] shadow-xl gap-3 transition-all active:scale-[0.98]">
+                    Send Message <Send className="h-5 w-5" />
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
