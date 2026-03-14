@@ -57,25 +57,28 @@ export function Navigation() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="bg-primary p-2 rounded-lg group-hover:bg-accent transition-colors">
             <Sparkles className="h-6 w-6 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-primary font-headline">
+          <span className="text-xl font-bold tracking-tight text-primary font-headline whitespace-nowrap">
             Sparkle<span className="text-accent-foreground/70">Pro</span>
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8 lg:gap-10">
           <Popover>
             <PopoverTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-semibold text-primary hover:text-accent transition-colors">
+              <button className="flex items-center gap-1 text-sm font-semibold text-primary hover:text-accent transition-colors whitespace-nowrap">
                 Cleaning Services <ChevronDown className="h-4 w-4" />
               </button>
             </PopoverTrigger>
-            <PopoverContent className="w-[100vw] max-w-5xl p-0 mt-4 border-none shadow-2xl rounded-3xl overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10 bg-white">
+            <PopoverContent 
+              align="start" 
+              className="w-[90vw] max-w-5xl p-0 mt-4 border-none shadow-2xl rounded-3xl overflow-hidden"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-10 bg-white">
                 <MenuSection title="CLEANING TYPES" items={cleaningTypes} />
                 <MenuSection title="AREAS WE CLEAN" items={areasWeClean} />
                 <MenuSection title="SPECIALTY CLEANING" items={specialtyCleaning} />
@@ -92,16 +95,16 @@ export function Navigation() {
             </PopoverContent>
           </Popover>
 
-          <Link href="#about" className="text-sm font-semibold hover:text-primary transition-colors">Why Sparkle Pro?</Link>
-          <Link href="#faq" className="text-sm font-semibold hover:text-primary transition-colors">FAQ</Link>
-          <Link href="#locations" className="text-sm font-semibold hover:text-primary transition-colors">Locations</Link>
+          <Link href="#about" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Why Sparkle Pro?</Link>
+          <Link href="#faq" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">FAQ</Link>
+          <Link href="#locations" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
           
-          <div className="flex items-center gap-2 text-primary font-bold">
+          <div className="flex items-center gap-2 text-primary font-bold shrink-0">
             <Phone className="h-4 w-4" />
             <span className="text-sm">877-624-3776</span>
           </div>
 
-          <Button className="rounded-full px-6 shadow-md hover:shadow-lg transition-all" asChild>
+          <Button className="rounded-full px-8 shadow-md hover:shadow-lg transition-all shrink-0" asChild>
             <Link href="#estimate">Get Free Estimate</Link>
           </Button>
         </nav>
@@ -118,22 +121,34 @@ export function Navigation() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b animate-in slide-in-from-top duration-300">
-          <nav className="flex flex-col p-4 gap-4">
-            <div className="font-bold text-primary px-2">Services</div>
-            {[...cleaningTypes, ...areasWeClean].slice(0, 6).map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium p-2 hover:bg-muted rounded-md"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Button className="w-full rounded-full" onClick={() => setIsOpen(false)} asChild>
-              <Link href="#estimate">Get Free Estimate</Link>
-            </Button>
+        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b animate-in slide-in-from-top duration-300 shadow-xl">
+          <nav className="flex flex-col p-6 gap-6">
+            <div className="space-y-4">
+              <div className="font-bold text-primary uppercase text-xs tracking-widest px-2">Services</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {[...cleaningTypes, ...areasWeClean].map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm font-medium p-3 hover:bg-muted rounded-xl transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="pt-6 border-t space-y-4">
+              <Link href="#about" className="block text-sm font-semibold px-2 py-2">Why Sparkle Pro?</Link>
+              <Link href="#locations" className="block text-sm font-semibold px-2 py-2">Locations</Link>
+              <div className="flex items-center gap-2 text-primary font-bold px-2 py-2">
+                <Phone className="h-4 w-4" />
+                <span className="text-sm">877-624-3776</span>
+              </div>
+              <Button className="w-full rounded-2xl py-6 text-lg font-bold mt-4" onClick={() => setIsOpen(false)} asChild>
+                <Link href="#estimate">Get Free Estimate</Link>
+              </Button>
+            </div>
           </nav>
         </div>
       )}
@@ -143,14 +158,14 @@ export function Navigation() {
 
 function MenuSection({ title, items }: { title: string, items: { name: string, href: string }[] }) {
   return (
-    <div className="space-y-4">
-      <h3 className="text-[#1a6a91] font-extrabold text-sm tracking-wider">{title}</h3>
-      <ul className="space-y-2">
+    <div className="space-y-6">
+      <h3 className="text-[#1a6a91] font-extrabold text-xs tracking-widest">{title}</h3>
+      <ul className="space-y-3">
         {items.map((item) => (
           <li key={item.name}>
             <Link 
               href={item.href} 
-              className="text-[#5ea3c2] hover:text-[#1a6a91] transition-colors text-sm font-medium block py-0.5"
+              className="text-[#5ea3c2] hover:text-[#1a6a91] transition-colors text-sm font-semibold block"
             >
               {item.name}
             </Link>
