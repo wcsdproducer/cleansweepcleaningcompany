@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -46,7 +45,7 @@ export default function ContactPage() {
               {[
                 { icon: Phone, title: "Phone", content: "877-624-3776", sub: "Mon-Fri: 8am - 6pm" },
                 { icon: Mail, title: "Email", content: "info@cleansweepcleaningcompany.com", sub: "Support 24/7" },
-                { icon: MapPin, title: "Main Office", content: "8720 Woodland Center Blvd, Tampa, FL 33614", sub: "Headquarters" }
+                { icon: MapPin, title: "Main Office", content: "3360 S Richfield Way, Aurora, CO 80013", sub: "Headquarters" }
               ].map((item, idx) => (
                 <Card key={idx} className="rounded-3xl shadow-xl border-none">
                   <CardContent className="p-8 flex items-center gap-6">

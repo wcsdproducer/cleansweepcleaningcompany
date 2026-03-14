@@ -41,9 +41,6 @@ export default function PrivacyPolicyPage() {
               <ul className="list-disc pl-6 space-y-2">
                 <li>To provide and maintain our cleaning services, including scheduling and processing payments.</li>
                 <li>To generate personalized cleaning plans using our AI tools.</li>
-                <li>To communicate with you about your services, updates, and promotional offers.</li>
-                <li>To improve our Site's functionality and user experience.</li>
-                <li>To comply with legal obligations and protect our rights and safety.</li>
               </ul>
             </section>
 
@@ -96,7 +93,7 @@ export default function PrivacyPolicyPage() {
                 <p className="font-bold text-[#1a6a91]">CleanSweep Cleaning Company LLC</p>
                 <p>Email: info@cleansweepcleaningcompany.com</p>
                 <p>Phone: 877-624-3776</p>
-                <p>Address: 8720 Woodland Center Blvd, Tampa, FL 33614</p>
+                <p>Address: 3360 S Richfield Way, Aurora, CO 80013</p>
               </div>
             </section>
           </div>
