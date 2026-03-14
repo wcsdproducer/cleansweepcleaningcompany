@@ -37,11 +37,9 @@ const specialtyCleaning = [
   { name: "Holiday Cleaning", href: "/specialty/holiday" },
   { name: "Home Sale Prep Cleaning", href: "/specialty/home-sale-prep" },
   { name: "Add-On Cleaning", href: "/specialty/add-on" },
-  { name: "Housekeeping", href: "/specialty/housekeeping" },
 ]
 
 const whyCleanSweep = [
-  { name: "49-Point Checklist", href: "/#checklist" },
   { name: "About CleanSweep", href: "/about" },
   { name: "Greener Cleaning", href: "/greener-cleaning" },
   { name: "Blog", href: "/blog" },

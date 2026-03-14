@@ -49,8 +49,6 @@ export function Footer() {
               <li><Link href="/services/regular" className="hover:text-primary transition-colors">Regular Service</Link></li>
               <li><Link href="/services/deep-clean" className="hover:text-primary transition-colors">Deep Clean Service</Link></li>
               <li><Link href="/services/move-in-out" className="hover:text-primary transition-colors">Move-in/Move-out service</Link></li>
-              <li><Link href="/specialty/housekeeping" className="hover:text-primary transition-colors">Housekeeping</Link></li>
-              <li><Link href="/#checklist" className="hover:text-primary transition-colors">49-Point Checklist</Link></li>
             </ul>
           </div>
 
