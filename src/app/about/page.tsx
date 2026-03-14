@@ -176,14 +176,19 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { title: "Cleaning Myth: Vinegar cleans everything", img: "1" },
-                { title: "How NOT to Clean with Bleach", img: "2" },
-                { title: "12 Days of Holiday Cleaning Checklist", img: "3" },
-                { title: "10 Brilliant Christmas Gifts for the Clean Freak", img: "4" }
+                { title: "Cleaning Myth: Vinegar cleans everything", img: "blog-teaser-1" },
+                { title: "How NOT to Clean with Bleach", img: "blog-teaser-2" },
+                { title: "12 Days of Holiday Cleaning Checklist", img: "blog-teaser-3" },
+                { title: "10 Brilliant Christmas Gifts for the Clean Freak", img: "blog-teaser-4" }
               ].map((blog, idx) => (
                 <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-md group hover:shadow-xl transition-all">
                   <div className="relative h-48">
-                    <Image src={`https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2F${blog.img}.jpg?alt=media`} alt={blog.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <Image 
+                      src={getImg(blog.img)} 
+                      alt={blog.title} 
+                      fill 
+                      className="object-cover group-hover:scale-110 transition-transform duration-500" 
+                    />
                   </div>
                   <div className="p-6 space-y-4">
                     <h4 className="font-bold text-[#1a6a91] leading-tight">{blog.title}</h4>

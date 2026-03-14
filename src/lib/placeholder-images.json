@@ -89,6 +89,30 @@
       "description": "Service detail hero image",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FCleanSweep%20Image%2001.png?alt=media&token=da9dc6d1-c69f-4c0d-83ed-b41eab8b165f",
       "imageHint": "clean space"
+    },
+    {
+      "id": "blog-teaser-1",
+      "description": "Blog teaser 1",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FCleanSweep%20Image%2001.png?alt=media&token=da9dc6d1-c69f-4c0d-83ed-b41eab8b165f",
+      "imageHint": "clean kitchen"
+    },
+    {
+      "id": "blog-teaser-2",
+      "description": "Blog teaser 2",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FCleanSweep%20Image%2002.png?alt=media&token=f431173d-0212-4f54-a77d-ff274ca9e5e5",
+      "imageHint": "clean living room"
+    },
+    {
+      "id": "blog-teaser-3",
+      "description": "Blog teaser 3",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FCleanSweep%20Image%2003.png?alt=media&token=2a1a54e8-ace6-4965-ba90-ef1a609dc0ca",
+      "imageHint": "cleaning professional"
+    },
+    {
+      "id": "blog-teaser-4",
+      "description": "Blog teaser 4",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-3673070449-f277c.firebasestorage.app/o/Images%2FCleanSweep%20Image%2004.png?alt=media&token=00eba09e-9408-4cf0-aa81-0a5fe937ada3",
+      "imageHint": "clean bathroom"
     }
   ]
 }
