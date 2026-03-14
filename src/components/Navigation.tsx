@@ -80,7 +80,7 @@ export function Navigation() {
               </button>
             </PopoverTrigger>
             <PopoverContent 
-              align="start" 
+              align="center" 
               className="w-[90vw] max-w-5xl p-0 mt-4 border-none shadow-2xl rounded-3xl overflow-hidden"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-10 bg-white">
