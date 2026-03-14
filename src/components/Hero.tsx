@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -6,9 +7,17 @@ import { MapPin, ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
+import { useAuth, initiateAnonymousSignIn } from "@/firebase"
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-home")
+  const auth = useAuth()
+
+  React.useEffect(() => {
+    if (auth) {
+      initiateAnonymousSignIn(auth)
+    }
+  }, [auth])
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
