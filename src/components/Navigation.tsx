@@ -39,6 +39,13 @@ const specialtyCleaning = [
   { name: "Housekeeping", href: "/specialty/housekeeping" },
 ]
 
+const whyCleanSweep = [
+  { name: "49-Point Checklist", href: "/#checklist" },
+  { name: "About CleanSweep", href: "/about" },
+  { name: "Greener Cleaning", href: "/greener-cleaning" },
+  { name: "Blog", href: "/blog" },
+]
+
 export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false)
   const [scrolled, setScrolled] = React.useState(false)
@@ -100,7 +107,31 @@ export function Navigation() {
             </PopoverContent>
           </Popover>
 
-          <Link href="#about" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Why CleanSweep?</Link>
+          <Popover>
+            <PopoverTrigger asChild>
+              <button className="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">
+                Why CleanSweep? <ChevronDown className="h-4 w-4" />
+              </button>
+            </PopoverTrigger>
+            <PopoverContent 
+              align="center" 
+              className="w-64 p-4 mt-4 border-none shadow-2xl rounded-2xl bg-white"
+            >
+              <ul className="space-y-1">
+                {whyCleanSweep.map((item) => (
+                  <li key={item.name}>
+                    <Link 
+                      href={item.href} 
+                      className="text-[#1a6a91] hover:text-accent transition-colors text-base font-medium block p-2 rounded-lg hover:bg-secondary/20"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </PopoverContent>
+          </Popover>
+
           <Link href="#faq" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">FAQ</Link>
           <Link href="#locations" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
           
@@ -144,7 +175,19 @@ export function Navigation() {
               </div>
             </div>
             <div className="pt-6 border-t space-y-4">
-              <Link href="#about" className="block text-sm font-semibold px-2 py-2">Why CleanSweep?</Link>
+              <div className="font-bold text-primary uppercase text-xs tracking-widest px-2">Company</div>
+              <div className="grid grid-cols-1 gap-1">
+                {whyCleanSweep.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm font-medium p-3 hover:bg-muted rounded-xl transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
               <Link href="#locations" className="block text-sm font-semibold px-2 py-2">Locations</Link>
               <div className="flex items-center gap-2 text-primary font-bold px-2 py-2">
                 <Phone className="h-4 w-4" />
