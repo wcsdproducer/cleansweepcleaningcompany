@@ -1,0 +1,160 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * Sparkle Pro Security Rules - Prototyping Mode
+     * 
+     * Philosophy:
+     * This ruleset enforces a strict user-ownership model for customer data while providing 
+     * administrative control over public-facing content and business applications.
+     * 
+     * Data Structure:
+     * - /customers/{userId}: Primary user profiles, restricted to the authenticated user.
+     * - /customers/{userId}/quotes/{quoteId}: User-specific service estimates, path-authorized.
+     * - /services, /checklistItems, /testimonials_public: Globally readable collections for the public-facing site.
+     * - /franchiseApplications, /contactSubmissions: Open-creation collections for lead generation, admin-only management.
+     * 
+     * Denormalization for Authorization:
+     * - All documents within the /customers tree are authorized via the path segment {userId}.
+     * - Quotes include a denormalized 'customerId' to ensure consistency between the data and its path.
+     * 
+     * Administrative Model:
+     * - Administrative access is determined by checking for a user's UID within a global /roles_admin/ collection.
+     */
+
+    // --- Helper Functions ---
+
+    /** @description Checks if the request is from an authenticated user. */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /** @description Checks if the authenticated user's UID matches the provided userId. */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /** @description Verifies the document exists and the current user is the owner. */
+    function isExistingOwner(userId) {
+      return resource != null && isOwner(userId);
+    }
+
+    /** @description Checks if the authenticated user has an administrator role. */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/roles_admin/$(request.auth.uid));
+    }
+
+    // --- Rules ---
+
+    /**
+     * @description Customer profiles: Only the owner can view, manage, or create their profile.
+     * @path /customers/{customerId}
+     * @allow User 'abc' (get) /customers/abc
+     * @deny User 'xyz' (update) /customers/abc
+     * @principle Path-based ownership and self-creation validation.
+     */
+    match /customers/{customerId} {
+      allow get, list: if isOwner(customerId);
+      allow create: if isOwner(customerId) && request.resource.data.id == customerId;
+      allow update: if isExistingOwner(customerId) && request.resource.data.id == resource.data.id;
+      allow delete: if isExistingOwner(customerId);
+
+      /**
+       * @description Quotes: Nested under the customer path, authorized by the parent segment.
+       * @path /customers/{customerId}/quotes/{quoteId}
+       * @allow User 'abc' (create) /customers/abc/quotes/q123
+       * @deny User 'abc' (create) /customers/abc/quotes/q123 if customerId field is 'xyz'
+       * @principle Path-based subcollection authorization with relational integrity checks.
+       */
+      match /quotes/{quoteId} {
+        allow get, list: if isOwner(customerId);
+        allow create: if isOwner(customerId) && request.resource.data.customerId == customerId;
+        allow update: if isExistingOwner(customerId) && request.resource.data.customerId == resource.data.customerId;
+        allow delete: if isExistingOwner(customerId);
+      }
+    }
+
+    /**
+     * @description Cleaning Services: Publicly readable catalog of Sparkle Pro offerings.
+     * @path /services/{serviceId}
+     * @allow Anonymous (get) /services/standard_clean
+     * @deny Signed-in user (create) /services/new_service
+     * @principle Public Read with Admin-Only Writes.
+     */
+    match /services/{serviceId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Checklist Items: Publicly readable tasks for the 49-point checklist.
+     * @path /checklistItems/{itemId}
+     * @allow Anonymous (list) /checklistItems
+     * @deny Registered user (delete) /checklistItems/item1
+     * @principle Public Read with Admin-Only Writes.
+     */
+    match /checklistItems/{itemId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Public Testimonials: Approved reviews visible to all users.
+     * @path /testimonials_public/{testimonialId}
+     * @allow Anonymous (get) /testimonials_public/review1
+     * @deny Anonymous (create) /testimonials_public/review2
+     * @principle Structural Segregation - only approved content is in this collection.
+     */
+    match /testimonials_public/{testimonialId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Pending Testimonials: Reviews awaiting moderation.
+     * @path /testimonials_pending/{testimonialId}
+     * @allow Admin (list) /testimonials_pending
+     * @deny Regular customer (get) /testimonials_pending/review3
+     * @principle Admin-only management of pending content.
+     */
+    match /testimonials_pending/{testimonialId} {
+      allow get, list, create, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Franchise Applications: Allows anyone to apply, but only admins to view/manage.
+     * @path /franchiseApplications/{applicationId}
+     * @allow Anonymous (create) /franchiseApplications/app1
+     * @deny User 'abc' (get) /franchiseApplications/app1 (unless they are admin)
+     * @principle Open creation for lead generation with private admin management.
+     */
+    match /franchiseApplications/{applicationId} {
+      allow create: if true;
+      allow get, list, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Contact Submissions: Allows anyone to send a message, but only admins to view/resolve.
+     * @path /contactSubmissions/{submissionId}
+     * @allow Anonymous (create) /contactSubmissions/msg1
+     * @deny User 'abc' (list) /contactSubmissions
+     * @principle Open creation for support requests with private admin management.
+     */
+    match /contactSubmissions/{submissionId} {
+      allow create: if true;
+      allow get, list, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Admin Roles: Internal collection to track authorized administrators.
+     * @path /roles_admin/{uid}
+     * @allow System (none)
+     * @deny Public (all)
+     * @principle System-internal metadata, strictly restricted to prevent escalation.
+     */
+    match /roles_admin/{uid} {
+      allow read, write: if false;
+    }
+  }
+}
