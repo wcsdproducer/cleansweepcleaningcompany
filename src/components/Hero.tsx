@@ -34,11 +34,6 @@ export function Hero() {
 
       <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
-          <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full border border-primary/20">
-            <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-xs font-semibold text-primary-foreground/80 uppercase tracking-widest">Trust CleanSweep</span>
-          </div>
-          
           <h1 className="text-5xl lg:text-7xl font-bold font-headline leading-[1.1] text-foreground">
             Your Home, <br />
             <span className="text-primary italic">Cleaned Your Way.</span>
