@@ -1,0 +1,14 @@
+{
+  "auth": {
+    "providers": {
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "CleanSweep Cleaning Company",
+        "supportEmail": "john@t3kniq.com",
+        "authorizedRedirectUris": ["https://cleansweepcleaningcompany.com"]
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}
