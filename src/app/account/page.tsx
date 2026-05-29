@@ -3,7 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { LogOut, Mail, User, Calendar, Shield, Phone } from 'lucide-react';
+import { LogOut, Mail, User, Calendar, Shield } from 'lucide-react';
 import { useFirebase } from '@/firebase';
 import { initiateSignOut } from '@/firebase/non-blocking-login';
 import { CustomerAuthModal } from '@/components/CustomerAuthModal';
@@ -146,18 +146,7 @@ export default function AccountPage() {
                   <p className="text-xs text-gray-400">Book your next cleaning</p>
                 </div>
               </Link>
-              <a
-                href="tel:8773184816"
-                className="flex items-center gap-3 p-4 rounded-2xl border border-gray-100 hover:border-[#2eb086]/30 hover:bg-[#2eb086]/5 transition-all group"
-              >
-                <div className="h-10 w-10 rounded-xl bg-[#2eb086]/10 flex items-center justify-center group-hover:bg-[#2eb086]/20 transition-colors">
-                  <Phone className="h-5 w-5 text-[#2eb086]" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-800">Call Us</p>
-                  <p className="text-xs text-gray-400">877-318-4816</p>
-                </div>
-              </a>
+
             </div>
           </section>
 

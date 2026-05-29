@@ -1,10 +1,9 @@
-
 "use client"
 
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, ChevronDown, Phone, LogOut, User } from "lucide-react"
+import { Menu, X, ChevronDown, LogOut, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import {
@@ -149,10 +148,7 @@ export function Navigation() {
 
             <Link href="/faq" className="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">FAQ</Link>
 
-            <div className="flex items-center gap-2 text-primary font-bold shrink-0">
-              <Phone className="h-4 w-4" />
-              <span className="text-sm">877-318-4816</span>
-            </div>
+
 
             <Button className="rounded-full px-8 shadow-md hover:shadow-lg transition-all shrink-0" asChild>
               <Link href="/contact">Get Free Estimate</Link>
@@ -261,10 +257,7 @@ export function Navigation() {
                   ))}
                 </div>
                 <Link href="/faq" className="block text-sm font-semibold px-2 py-2">FAQ</Link>
-                <div className="flex items-center gap-2 text-primary font-bold px-2 py-2">
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm">877-318-4816</span>
-                </div>
+
                 <Button className="w-full rounded-2xl py-6 text-lg font-bold mt-4" onClick={() => setIsOpen(false)} asChild>
                   <Link href="/contact">Get Free Estimate</Link>
                 </Button>

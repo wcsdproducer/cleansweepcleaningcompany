@@ -29,7 +29,7 @@ import {
 import { useFirebase } from "@/firebase"
 import { useToast } from "@/hooks/use-toast"
 import { Toaster } from "@/components/ui/toaster"
-import { Sparkles, CheckCircle2, Loader2, Phone, Mail, MapPin } from "lucide-react"
+import { Sparkles, CheckCircle2, Loader2, MapPin } from "lucide-react"
 
 const formSchema = z.object({
   name: z.string().min(2, "Please enter your full name."),
@@ -80,7 +80,7 @@ export default function ContactPage() {
     } catch {
       toast({
         title: "Something went wrong",
-        description: "We couldn't send your message. Please call us at 877-318-4816.",
+        description: "We couldn't send your message. Please try again or reach out via the chat widget.",
         variant: "destructive",
       })
     } finally {
@@ -111,18 +111,6 @@ export default function ContactPage() {
 
             {/* Contact Info sidebar */}
             <div className="space-y-4 lg:pt-8">
-              <ContactInfoCard
-                icon={<Phone className="h-5 w-5 text-[#1a6a91]" />}
-                label="Phone"
-                value="877-318-4816"
-                href="tel:8773184816"
-              />
-              <ContactInfoCard
-                icon={<Mail className="h-5 w-5 text-[#1a6a91]" />}
-                label="Email"
-                value="info@cleansweepcleaningcompany.com"
-                href="mailto:info@cleansweepcleaningcompany.com"
-              />
               <ContactInfoCard
                 icon={<MapPin className="h-5 w-5 text-[#1a6a91]" />}
                 label="Service Area"
@@ -316,9 +304,7 @@ function SuccessState({ onReset }: { onReset: () => void }) {
       <div className="space-y-2">
         <h2 className="text-2xl font-bold text-gray-900">Message Sent!</h2>
         <p className="text-gray-500 max-w-sm">
-          Thanks for reaching out! We&apos;ll get back to you within 1 business day. 
-          Need immediate help? Call us at{" "}
-          <a href="tel:8773184816" className="text-[#1a6a91] font-semibold">877-318-4816</a>.
+          Thanks for reaching out! We&apos;ll get back to you within 1 business day.
         </p>
       </div>
       <Button
